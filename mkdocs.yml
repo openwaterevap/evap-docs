@@ -1,12 +1,12 @@
 site_name: Reservoir Evaporation API Docs
 site_description: Unofficial Operational Reservoir Evapotranspiration API Documentation
 
-site_author: Samapriya Roy
-site_url: https://github.com/samapriya/evap-docs
+site_author: Desert Research Institute
+site_url: https://github.com/openwaterevap/evap-docs
 
 # Repository
 repo_name: evap-docs
-repo_url: https://github.com/samapriya/evap-docs
+repo_url: https://github.com/openwaterevap/evap-docs
 edit_uri: blob/main/docs/
 
 # Copyright
