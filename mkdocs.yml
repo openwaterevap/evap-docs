@@ -1,5 +1,5 @@
-site_name: Reservoir Evaporation API Docs
-site_description: Unofficial Operational Reservoir Evapotranspiration API Documentation
+site_name: Open Water Evaporation Network
+site_description: OWEN Documentation
 
 site_author: Desert Research Institute
 site_url: https://github.com/openwaterevap/evap-docs
@@ -162,5 +162,6 @@ nav:
   - Examples: examples.md
   - Appendix: appendix.md
   - FAQ: faq.md
+  - Contact: contact.md
   - License: license.md
   - Changelog: changelog.md
