@@ -4,7 +4,7 @@ Contact Information
 OWEN is a collaborative initiative that brings together academic and applied research expertise from DRI,
 Texas A&M University, Virginia Tech University, Reclamation, and NASA to improve the understanding and estimation
 of reservoir evaporation. For more information on OWEN, including ongoing projects, upcoming initiatives, and
-potential collaborations please contact one of the project leads below.
+potential collaborations, please contact one of the project leads below.
 
 
 ## Dr. Justin Huntington
@@ -21,6 +21,11 @@ potential collaborations please contact one of the project leads below.
 * Associate Professor of Hydrology and Remote Sensing
 *   **Institute:** Virginia Tech University
 *   **Website:** https://geos.vt.edu/people/Everyone/allen--george.html
+
+## Dr. Kathleen Holman
+* Meteorologist
+*   **Institute:** Reclamation Technical Service Center
+*   **Website:** https://www.usbr.gov/tsc/
 
 ## Mr. Christopher Pearson
 * Associate Research Scientist, Hydrology
