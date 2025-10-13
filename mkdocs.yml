@@ -59,9 +59,9 @@ theme:
   font:
     text: Google Sans
     code: Regular
-  favicon: assets/favicon.png
-    logo: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
-    favicon: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
+#  favicon: assets/favicon.png
+  logo: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
+  favicon: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
   icon:
     logo: logo
 
