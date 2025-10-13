@@ -60,8 +60,8 @@ theme:
     text: Google Sans
     code: Regular
 #  favicon: assets/favicon.png
-  logo: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
-  favicon: "https://github.com/openwaterevap/evap-docs/blob/main/docs/images/combined_logos.jpg"
+  logo: "https://raw.githubusercontent.com/openwaterevap/evap-docs/refs/heads/main/docs/images/combined_logos.jpg"
+  favicon: "https://raw.githubusercontent.com/openwaterevap/evap-docs/refs/heads/main/docs/images/combined_logos.jpg"
   icon:
     logo: logo
 
