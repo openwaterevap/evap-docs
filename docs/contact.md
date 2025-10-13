@@ -31,3 +31,18 @@ potential collaborations, please contact one of the project leads below.
 * Associate Research Scientist, Hydrology
 *   **Institute:** Desert Research Institute
 *   **Website:** https://www.dri.edu/directory/chris-pearson/
+
+## Mr. Thomas Ott
+* Assistant Research Scientist, Hydrology
+*   **Institute:** Desert Research Institute
+*   **Website:** https://www.dri.edu/directory/thomas-ott/
+
+## Dr. Britta Daudert
+* Associate Research Scientist, Climatology
+*   **Institute:** Desert Research Institute
+*   **Website:** https://www.dri.edu/directory/britta-daudert/
+
+## Dr. Sam Roy
+* Sr. Geospatial Software Engineer
+*   **Institute:** Desert Research Institute
+*   **Website:** https://www.dri.edu/directory/sam-roy/
