@@ -15,46 +15,7 @@ At the heart of the system is a powerful cloud computing infrastructure comprise
 
 ## System Architecture
 
-```mermaid
-graph TD
-    %% External Data Sources
-    subgraph "External Data Sources"
-        A["Reservoir Elevation, Depth<br/>and Area<br/>Sources: USGS, CDEC, RISE,<br/>CPN_Hydromet, MB_Hydromet"]
-    end
-
-    %% Earth Engine
-    subgraph "Earth Engine"
-        B["Reservoir Metadata<br/>(Engine Feature<br/>Collection)"]
-        C["Meteorological Data<br/>(Earth Engine Image<br/>Collections)"]
-        D["Web Application<br/>(Earth Engine Application)"]
-    end
-
-    %% DRI Virtual Server
-    subgraph "DRI Virtual Server"
-        E["DLEM Model<br/>(Python)"]
-        F[("Geodatabase<br/>(Postgres+PostGIS)")]
-        G["API<br/>(FastAPI/Python)"]
-    end
-
-    %% Connections
-    A --> E
-    B --> E
-    C --> E
-    E --> F
-    F --> G
-    F --> D
-
-    %% Styling
-    classDef external fill:#e3f2fd,stroke:#1976d2
-    classDef earthengine fill:#e8f5e8,stroke:#388e3c
-    classDef driserver fill:#fff3e0,stroke:#f57c00
-    classDef database fill:#fce4ec,stroke:#c2185b
-
-    class A external
-    class B,C,D earthengine
-    class E,G driserver
-    class F database
-```
+![System-Arch](https://i.imgur.com/ZtrIRdq.png)
 
 ## System Components
 
