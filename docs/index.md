@@ -1,7 +1,7 @@
 # Open Water Evaporation Network
 <img src="images/powell_landscape_cropped.jpg" alt="Image Description"  width="800">
 
-Beta Status: This website is currently under development and may have some limitations or issues. Evaporation data should be considered provisional and not used for operational support or decision making. A production version of this API and database is scheduled to launch late summer 2025. 
+Beta Status: This website is currently under development and may have some limitations or issues. Evaporation data should be considered provisional and not used for operational support or decision making. A production version of this API and database is scheduled to launch late 2026. 
 
 ## Overview
 
