@@ -37,7 +37,7 @@ The following variables are available for reservoirs across different datasets:
 | Tw | Water temperature | °C | °F |
 | Tw0 | Surface water temperature | °C | °F |
 | Fetch | Fetch | m | ft |
-| Lerr | Latent heat of evaporation | W/m² | W/m² |
+| Lerr | LEM Model Error Flag | -- | --|
 
 #### NETE-VOLUME-CALCS Dataset (Net Evaporation and Evaporation Volume Variables)
 | Variable | Description | Units (Metric) | Units (English) |
