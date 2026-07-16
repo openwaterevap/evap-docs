@@ -15,7 +15,7 @@ The following variables are available for reservoirs across different datasets:
 | vpd_kpa | Vapor pressure deficit | kPa | kPa |
 | vs2m | Wind speed at 2 meters | m/s | mph |
 | srad | Solar radiation | W/m² | W/m² |
-| th | Specific humidity | kg/kg | kg/kg |
+| th | Wind Direction | deg | deg |
 | sph_kgkg | Specific humidity | kg/kg | kg/kg |
 | pres_pa | Air pressure | Pa | Pa |
 
