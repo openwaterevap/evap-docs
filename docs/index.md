@@ -34,7 +34,7 @@ Additional datsets including state-wide estimates for the State of Texas, foreca
 
 ## Collaborative Development
 
-This dataset and API was collaboratively developed by the Reclamation, Desert Research Institute, Texas A&M University, Virginia Tech University, and NASA. 
+This dataset and API was collaboratively developed by the Reclamation, Desert Research Institute, Texas A&M University, Virginia Tech University, NASA and USGS. 
 
 <center>
 
