@@ -59,11 +59,9 @@ theme:
   font:
     text: Google Sans
     code: Regular
-#  favicon: assets/favicon.png
-  logo: "https://raw.githubusercontent.com/openwaterevap/evap-docs/refs/heads/main/docs/images/combined_logos.jpg"
-  favicon: "https://raw.githubusercontent.com/openwaterevap/evap-docs/refs/heads/main/docs/images/combined_logos.jpg"
-  icon:
-    logo: logo
+  # White mark: Material tints the header with the primary color
+  logo: images/owen-mark-white.svg
+  favicon: images/owen-favicon.svg
 
 # Options
 extra:
@@ -148,13 +146,13 @@ extra_css:
 
 # Page tree
 nav:
-  - Home: index.md
+  - Home: overview.md
   - Methods: methods.md
   - Getting Started:
       - Overview: started/getting-started.md
       - Technical Stack: started/techstack.md
       - Installation: started/authentication.md
-      - API Playground: https://operevap.dri.edu/docs
+      - API Playground: https://playground.openwaterevap.net/
   - API Endpoints:
       - Info Endpoints: endpoints/info-endpoints.md
       - Metadata Endpoints: endpoints/metadata-endpoints.md

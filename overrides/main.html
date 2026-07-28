@@ -4,6 +4,26 @@ This file was automatically generated - do not edit
 {% extends "base.html" %}
 {% block extrahead %}
 <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.f7ec4df2.min.css' | url }}">
+
+<!-- OWEN social / unfurl cards -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ config.site_name }}">
+<meta property="og:title" content="OWEN: Open Water Evaporation Network">
+<meta property="og:description" content="Daily and near-real-time open-water evaporation estimates for 247 Reclamation reservoirs across 17 western states, served through an open API. Developed by DRI, Texas A&M, Virginia Tech, NASA, USGS and Reclamation.">
+<meta property="og:url" content="https://docs.openwaterevap.net/">
+<meta property="og:image" content="https://docs.openwaterevap.net/images/owen-og-card-dark.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OWEN wordmark with partner logos: DRI, Texas A&M, Virginia Tech, NASA, Bureau of Reclamation, USGS.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OWEN: Open Water Evaporation Network">
+<meta name="twitter:description" content="Daily reservoir evaporation estimates from the Texas A&M DLEM, served through an open API.">
+<meta name="twitter:image" content="https://docs.openwaterevap.net/images/owen-og-card-dark.png">
+
+<!-- OWEN favicons -->
+<link rel="apple-touch-icon" href="{{ 'images/owen-favicon-180.png' | url }}" sizes="180x180">
+<link rel="icon" href="{{ 'images/owen-favicon-32.png' | url }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ 'images/owen-favicon-16.png' | url }}" sizes="16x16" type="image/png">
 <style>
     .content-container {
         display: flex;

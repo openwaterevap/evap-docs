@@ -15,3 +15,51 @@
     height: 100%;
     border: 0;
 }
+
+/* --- OWEN header logo --- */
+
+/* header logo sizing (mark is 1:1, keep it 1.6rem tall) */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 1.6rem;
+    width: auto;
+}
+
+/* light: indigo primary, dark: blue on slate - these come from the palette;
+   these vars only tune the OWEN accents used in content */
+:root {
+    --owen-bar: #3F51B5;
+    --owen-ink: #1A237E;
+}
+
+[data-md-color-scheme="slate"] {
+    --owen-bar: #2196F3;
+    --owen-ink: #FFFFFF;
+}
+
+/* "Developed by" partner strip: white plate in both schemes so federal marks
+   are never shown on a tinted background */
+.owen-partners {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 2px;
+}
+
+.owen-partners img {
+    height: 2.2rem;
+    width: auto;
+}
+
+.owen-partners__label {
+    font-family: var(--md-code-font-family, monospace);
+    font-size: .65rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #80868b;
+    margin-bottom: .5rem;
+    display: block;
+}
