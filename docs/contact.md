@@ -2,7 +2,7 @@ Contact Information
 ====================
 
 OWEN is a collaborative initiative that brings together academic and applied research expertise from DRI,
-Texas A&M University, Virginia Tech University, Reclamation, and NASA to improve the understanding and estimation
+Texas A&M University, Virginia Tech University, Reclamation, NASA and USGS to improve the understanding and estimation
 of reservoir evaporation. For more information on OWEN, including ongoing projects, upcoming initiatives, and
 potential collaborations, please contact one of the project leads below.
 
