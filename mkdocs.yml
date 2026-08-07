@@ -63,20 +63,6 @@ theme:
   logo: images/owen-mark-white.svg
   favicon: images/owen-favicon.svg
 
-# Options
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/samapriya
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/samapriya
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/@samapriyaroy
-    - icon: fontawesome/brands/mastodon
-      link: https://mapstodon.space/@samapriya
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/samapriyaroy
-
   # analytics:
   #   provider: google
   #   property: G-P5Q8CHNTVP
