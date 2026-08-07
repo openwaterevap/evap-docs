@@ -9,9 +9,6 @@ repo_name: evap-docs
 repo_url: https://github.com/openwaterevap/evap-docs
 edit_uri: blob/main/docs/
 
-# Copyright
-copyright: "Copyright &copy; 2025 Samapriya Roy"
-
 # Configuration
 theme:
   name: "material"
