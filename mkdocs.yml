@@ -131,6 +131,10 @@ extra_css:
 nav:
   - Home: overview.md
   - Methods: methods.md
+  - Databases: database.md
+      - Texas: twdb_db.md
+      - Reclamation: usbr_db.md
+      - CONUS: conus_db.md
   - Getting Started:
       - Overview: started/getting-started.md
       - Technical Stack: started/techstack.md
