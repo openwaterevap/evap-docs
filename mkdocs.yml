@@ -131,7 +131,7 @@ extra_css:
 nav:
   - Home: overview.md
   - Methods: methods.md
-  - Databases: database.md
+  - Databases:
       - Texas: databases/twdb_db.md
       # - Reclamation: usbr_db.md
       # - CONUS: conus_db.md
