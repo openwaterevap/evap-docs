@@ -1,69 +1,65 @@
-# Texas Reservoir Evaporation Database & Web Application
+# Texas Reservoir Evaporation
 
-> A statewide resource for accessing high-quality, near-real-time reservoir evaporation data for Texas.
+> Daily, near-real-time evaporation estimates and forecast products for Texas reservoirs.
 
----
+[//]: # ([Explore reservoir data]&#40;https://twdb.dri.edu/&#41; · [Access the API]&#40;https://twdb.dri.edu/&#41; · [View gridded data]&#40;https://dri-apps.projects.earthengine.app/view/twdb-raster-lake-evaporation&#41; · [View forecasts]&#40;https://dri-apps.projects.earthengine.app/view/twdb-reservoir-forecast&#41;)
 
-## Project Overview
+## Find the right resource
 
-### Background
+| Resource | Use it to | Access |
+|---|---|---|
+| Reservoir Web Explorer | View and compare reservoir evaporation, storage, and meteorological data. | [Open Explorer](URL) |
+| Reservoir Evaporation API | Retrieve data programmatically for analysis and integration. | [View API documentation](URL) |
+| Gridded Evaporation | Access statewide estimates for six representative pond scenarios. | [View gridded data](URL) |
+| Evaporation Forecasts | Access 28-day forecast data for supported reservoirs. | [View forecasts](URL) |
 
-Reservoir evaporation is a critical component of water budgeting and operational planning. However, it is often overlooked or simplified because consistent, accurate evaporation estimates can be difficult to obtain.
+## What data are available?
 
-Historically, evaporation estimates across Texas have relied on pan evaporation methods, which are known to introduce substantial bias and uncertainty *(Friedrich et al., 2018)*. Recent advances in hydrometeorological modeling and cloud-based data processing now enable the near-real-time production of high-resolution evaporation estimates to support water-management decisions.
+The project provides historical and near-real-time records of:
 
-### Funding
+- Evaporation rates and volumes
+- Reservoir storage conditions and related physical parameters
+- Meteorological forcing data
+- Forecast forcing and evaporation products
 
+
+## About the project
+
+### Why evaporation matters
+Evaporation is a major component of reservoir water budgets and operational planning.
+Traditional pan-evaporation approaches can introduce bias and uncertainty
+*(Friedrich et al., 2018)*. This project applies hydrometeorological modeling and
+cloud-based processing to provide consistent evaporation estimates across Texas.
+
+### Project objectives
+- Produce reservoir-specific evaporation rates and volumes for major Texas
+  water-supply reservoirs.
+- Provide statewide gridded evaporation estimates for six pond scenarios.
+- Support water management, planning, analysis, and public access to evaporation data.
+
+### Partners and funding
 The Texas Reservoir Evaporation Project was jointly funded by:
 
-- [**Texas Water Development Board (TWDB)**](https://www.twdb.texas.gov/)
-- [**U.S. Army Corps of Engineers (USACE)**](https://www.swf.usace.army.mil/)
+- [Texas Water Development Board (TWDB)](https://www.twdb.texas.gov/)
+- [U.S. Army Corps of Engineers (USACE)](https://www.swf.usace.army.mil/)
 
-### Database Description
+## Data sources and model forcings
 
-This project developed a freely accessible, daily reservoir evaporation database for water managers, planners, stakeholders, and the public throughout Texas.
+Reservoir evaporation estimates integrate specific meteorological, hydrologic, and geospatial
+datasets to provide stakeholders with consistent, high-quality information for their intended use cases and
+applications. The following table summarizes the primary datasets used to develop reservoir evaporation estimates for the
+State of Texas.
+See the [project report](URL) and [methods documentation](URL) for details.
 
-The database provides historical and near-real-time records of:
+| Category | Source / product | Period | Use in this project | Link |
+|---|---|---:|---|---|
+| Meteorological forcing¹ | gridMET | 1980–2015 | Bias-corrected to align with RTMA and used to force DLEM. | [gridMET](https://www.climatologylab.org/gridmet.html) |
+| Meteorological forcing¹ | RTMA | 2016–present | Aggregated from hourly to daily and used to force DLEM. | [Climate Engine RTMA Daily](https://climateengine.org/datasets/climatehydrology/rtma_daily_2500/) |
+| Precipitation | gridMET | 1980–present | Used in precipitation and net-evaporation estimates. | [gridMET](https://www.climatologylab.org/gridmet.html) |
+| Reservoir parameters | TWDB | 1980–present | Provides reservoir area, volume, and depth data where available. | [Water Data for Texas](https://www.waterdatafortexas.org/) |
+| GIS data | TWDB | — | Provides reservoir geometry and extent. | [Water Data for Texas](https://www.waterdatafortexas.org/) |
+| Forecast forcings | CFS gridMET | — | Provides 28-day forecast forcings, bias-corrected to RTMA. | [Climate Engine CFS gridMET](https://climateengine.org/datasets/forecasts/cfsgridmet_1to4week_4000/) |
 
-- **Evaporation rates**
-- **Evaporation volumes**
-- **Reservoir storage conditions**
-- **Meteorological forcing data**
-
-These inputs are integrated to produce the best available estimates of reservoir evaporation for major Texas reservoirs.
-
-In addition to reservoir-specific estimates, the project includes a raster-based **DLEM** application that simulates evaporation under six pond scenarios statewide. These scenarios support planning and development in locations where site-specific reservoir data are unavailable.
-
----
-
-## Project Objectives
-
-- Produce reservoir-specific simulations of evaporation rates and volumes for major water-supply reservoirs throughout Texas.
-- Generate gridded evaporation estimates for six pond scenarios to support statewide planning and development activities.
-
----
-
-## Applications & Resources
-
-| Resource | Description | Link |
-|---|---|---|
-| **Texas Reservoir Evaporation API** | Provides programmatic access to evaporation data for reservoirs across Texas. | [Visit API](https://twdb.dri.edu/) |
-| **Texas Reservoir Evaporation Web Explorer** | Provides an interactive interface for viewing reservoir evaporation data. | [Open Web Explorer](https://twdb.dri.edu/) |
-| **Texas Gridded Reservoir Evaporation** | Provides access to gridded evaporation estimates across the state of Texas. | [View Gridded Data](https://twdb.dri.edu/) |
-| **Texas Reservoir Evaporation Forecast** | Provides access to reservoir evaporation forecast data. | [View Forecast Data](https://twdb.dri.edu/) |
-
----
-
-## Texas Reservoir Data and DLEM Forcings
-
-| Category                           | Data Source | Time Period | Description                                                                                                            | Link                                                                                                 |
-|------------------------------------|:-----------:|:---:|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| Meteorological forcing<sup>1</sup> |   gridMET   | 1980–2015 | gridMET meteorological forcings are adjusted to RTMA using monthly bias-correction factors.                            | [gridMET](https://www.climatologylab.org/gridmet.html)                                               |
-| Meteorological forcing<sup>1</sup> |    RTMA     | 2016–present | RTMA data are aggregated from hourly to daily by Climate Engine and used to force DLEM.                                | [Climate Engine RTMA Daily](https://climateengine.org/datasets/climatehydrology/rtma_daily_2500/)    |
-| Precipitation                      |   gridMET   | 1980–present | Precipitation and net evaporation estimates are based on gridMET precipitation data.                                   | [gridMET](https://www.climatologylab.org/gridmet.html)                                               |
-| Reservoir parameters               |    TWDB     | 1980–present | Reservoir area, volume, and depth are based on on-site observations where available; static values are used elsewhere. | [TWDB Water Data for Texas](https://www.waterdatafortexas.org/)                                      |
-| GIS data                           |    TWDB     | — | Reservoir geometry and extent are derived from polygons developed by TWDB.                                             | [TWDB Water Data for Texas](https://www.waterdatafortexas.org/)                                      |
-| Forecast Forcings                  | CFS gridMET | — | 28-day forecast forcings are derived from CFS gridMET and adjusted to RTMA using monthly bias-correction factors.      | [Climate Engine CFS gridMET](https://climateengine.org/datasets/forecasts/cfsgridmet_1to4week_4000/) |
-
-<sup>1</sup>Meteorological forcing variables include air temperature, vapor pressure deficit, wind speed and direction, solar radiation, and air pressure. 
-For more details on forcing variables, refer to the [Appendix](https://docs.openwaterevap.net/appendix/).
+¹ Meteorological forcing variables include air temperature, vapor pressure deficit,
+wind speed and direction, solar radiation, and air pressure. See the
+[Appendix](https://docs.openwaterevap.net/appendix/) for definitions.ls on forcing variables, refer to the [Appendix](https://docs.openwaterevap.net/appendix/).
