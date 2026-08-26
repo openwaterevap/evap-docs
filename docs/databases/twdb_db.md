@@ -6,18 +6,18 @@
 
 ## Project Overview
 
-### Funding
-
-The Texas Reservoir Evaporation Project was jointly funded by:
-
-- **Texas Water Development Board (TWDB)**
-- **U.S. Army Corps of Engineers (USACE)**
-
 ### Background
 
 Reservoir evaporation is a critical component of water budgeting and operational planning. However, it is often overlooked or simplified because consistent, accurate evaporation estimates can be difficult to obtain.
 
 Historically, evaporation estimates across Texas have relied on pan evaporation methods, which are known to introduce substantial bias and uncertainty *(Friedrich et al., 2018)*. Recent advances in hydrometeorological modeling and cloud-based data processing now enable the near-real-time production of high-resolution evaporation estimates to support water-management decisions.
+
+### Funding
+
+The Texas Reservoir Evaporation Project was jointly funded by:
+
+- [**Texas Water Development Board (TWDB)**](https://www.twdb.texas.gov/)
+- [**U.S. Army Corps of Engineers (USACE)**](https://www.swf.usace.army.mil/)
 
 ### Database Description
 
@@ -54,7 +54,16 @@ In addition to reservoir-specific estimates, the project includes a raster-based
 
 ---
 
-## Primary URL
+## Texas Reservoir Data and DLEM Forcings
 
-**Texas Reservoir Evaporation Portal:**  
-<https://twdb.dri.edu/>
+| Category                           | Data Source | Time Period | Description                                                                                                            | Link                                                                                                 |
+|------------------------------------|:-----------:|:---:|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Meteorological forcing<sup>1</sup> |   gridMET   | 1980–2015 | gridMET meteorological forcings are adjusted to RTMA using monthly bias-correction factors.                            | [gridMET](https://www.climatologylab.org/gridmet.html)                                               |
+| Meteorological forcing<sup>1</sup> |    RTMA     | 2016–present | RTMA data are aggregated from hourly to daily by Climate Engine and used to force DLEM.                                | [Climate Engine RTMA Daily](https://climateengine.org/datasets/climatehydrology/rtma_daily_2500/)    |
+| Precipitation                      |   gridMET   | 1980–present | Precipitation and net evaporation estimates are based on gridMET precipitation data.                                   | [gridMET](https://www.climatologylab.org/gridmet.html)                                               |
+| Reservoir parameters               |    TWDB     | 1980–present | Reservoir area, volume, and depth are based on on-site observations where available; static values are used elsewhere. | [TWDB Water Data for Texas](https://www.waterdatafortexas.org/)                                      |
+| GIS data                           |    TWDB     | — | Reservoir geometry and extent are derived from polygons developed by TWDB.                                             | [TWDB Water Data for Texas](https://www.waterdatafortexas.org/)                                      |
+| Forecast Forcings                  | CFS gridMET | — | 28-day forecast forcings are derived from CFS gridMET and adjusted to RTMA using monthly bias-correction factors.      | [Climate Engine CFS gridMET](https://climateengine.org/datasets/forecasts/cfsgridmet_1to4week_4000/) |
+
+<sup>1</sup>Meteorological forcing variables include air temperature, vapor pressure deficit, wind speed and direction, solar radiation, and air pressure. 
+For more details on forcing variables, refer to the [Appendix](https://docs.openwaterevap.net/appendix/).
