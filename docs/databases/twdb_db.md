@@ -8,10 +8,10 @@
 
 | Resource | Use it to | Access |
 |---|---|---|
-| Reservoir Web Explorer | View and compare reservoir evaporation, storage, and meteorological data. | [Open Explorer](URL) |
-| Reservoir Evaporation API | Retrieve data programmatically for analysis and integration. | [View API documentation](URL) |
-| Gridded Evaporation | Access statewide estimates for six representative pond scenarios. | [View gridded data](URL) |
-| Evaporation Forecasts | Access 28-day forecast data for supported reservoirs. | [View forecasts](URL) |
+| Reservoir Web Explorer | View and compare reservoir evaporation, storage, and meteorological data. | [Open Explorer](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation) |
+| Reservoir Evaporation API | Retrieve data programmatically for analysis and integration. | [View API documentation](https://twdb.dri.edu/docs) |
+| Gridded Evaporation | Access statewide estimates for six representative pond scenarios. | [View gridded data](https://dri-apps.projects.earthengine.app/view/twdb-raster-lake-evaporation) |
+| Evaporation Forecasts | Access 28-day forecast data for supported reservoirs. | [View forecasts](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-forecast) |
 
 ## What data are available?
 
