@@ -2,7 +2,9 @@
 
 > Daily, near-real-time evaporation estimates and forecast products for Reclamation reservoirs.
 
-[//]: # ([Explore reservoir data]&#40;https://twdb.dri.edu/&#41; · [Access the API]&#40;https://twdb.dri.edu/&#41;)
+
+![USBR](images/reclamation_wide.jpg){ width="400" }
+
 
 ## Data Access
 
@@ -44,7 +46,7 @@ See the [project report](URL) for more details.
 The Reclamation Reservoir Evaporation Project was developed in partnership with Reclamation Technical Service Center (TSC)
 and funded by:
 
-- [United States Bureaue of Reclamation (Reclamation)](https://www.usbr.gov/)
+- [United States Bureau of Reclamation (Reclamation)](https://www.usbr.gov/)
 
 ## Data sources and model forcings
 
@@ -70,3 +72,11 @@ wind speed and direction, solar radiation, and air pressure. See the
 ² Reservoir elevation information is gathered from multiple sources including Reclamation’s Hydromet, United States Geological Survey (USGS) National Water Information System (NWIS),
 Reclamation Information Sharing Environment (RISE), and the California Data Exchange Center (CDEC). Elevaiton information is combined with Area-Elevation-Capacity curves to 
 estimate both surface area and average depth. Locations without accessible data use static values for depth and area. 
+
+[//]: # (## Reservoir Depth, Area, and Volumes)
+
+[//]: # ()
+[//]: # (Historical and real-time reservoir area, depth, and storage volume information for each of the 247 Reclamation reservoirs was obtained through Python-based queries to four separate data servers: Reclamation’s Hydromet, United States Geological Survey &#40;USGS&#41; National Water Information System &#40;NWIS&#41;, Reclamation Information Sharing Environment &#40;RISE&#41;, and the California Data Exchange Center &#40;CDEC&#41;. Across all online databases, water surface elevation data was the most consistently accessible variable and had significantly fewer quality issues than either reservoir surface area or reservoir volume. Consequently, water surface elevation data was retrieved and used to estimate surface area and volume. After retrieval, an inter-quartile range &#40;IQR&#41; outlier method with a fence threshold of 1.5 &#40;used to scale the IQR&#41; was applied to the historical elevation time series to remove outlier values.)
+
+[//]: # ()
+[//]: # (After filtering, a forward fill method was used to fill all missing data &#40;i.e., records that were originally missing and/or records that were filtered out with the IQR method&#41;. For example, when no data were available for a select period, the last observed elevation value was assumed for the entire missing period until quality data observations resumed. Surface area and volume data were calculated using available site-specific area-capacity curves gathered from RISE. When multiple area-capacity curves were available for a single reservoir, the most recently developed curve was used to reconstruct surface area and volume values for all dates in the historical record. Average reservoir depth, a required input to DLEM, was then calculated as the ratio of daily reservoir volume to daily reservoir surface area for each day in the historical period. Average reservoir depth values before consistent elevation data are based on maximum reservoir capacity characteristics &#40;e.g., volume and surface area&#41;. In the absence of readily accessible data or historical area-elevation-volume curves, a static reservoir depth was assumed based on full pool conditions.)
