@@ -2,15 +2,9 @@
 
 > Daily, near-real-time evaporation estimates and forecast products for Texas reservoirs.
 
-<p align="left">
-  <img src="../images/twdb_logo.jpg" alt="TWDB logo" width="240" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="../images/usace_logo.png" alt="USACE logo" width="160" />
-</p>
-
-
-[//]: # ([Explore reservoir data]&#40;https://twdb.dri.edu/&#41; · [Access the API]&#40;https://twdb.dri.edu/&#41; · [View gridded data]&#40;https://dri-apps.projects.earthengine.app/view/twdb-raster-lake-evaporation&#41; · [View forecasts]&#40;https://dri-apps.projects.earthengine.app/view/twdb-reservoir-forecast&#41;)
-
+| | |
+|:---:|:---:|
+| ![Texas Water Development Board logo](../images/twdb_logo.jpg){ width="240" } | ![U.S. Army Corps of Engineers logo](../images/usace_logo.png){ width="160" } |
 ## Find the right resource
 
 | Resource | Use it to | Access |
