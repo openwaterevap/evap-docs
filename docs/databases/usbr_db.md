@@ -2,13 +2,7 @@
 
 > Daily, near-real-time evaporation estimates and forecast products for Reclamation reservoirs.
 
-[//]: # (![USBR]&#40;../images/reclamation_wide.jpg&#41;{ width="400" })
-
-
-<div style="background-color: DarkBlue; padding: 10px; display: inline-block;">
-  <img src="../images/reclamation_wide.jpg" alt="USBR Logo">
-</div>
-
+![USBR](../images/reclamation_wide_dark.jpg){ width="400" }
 
 
 ## Data Access
