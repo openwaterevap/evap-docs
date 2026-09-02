@@ -18,8 +18,8 @@ OWEN supports water-resource monitoring, planning, research, and the development
 of operational workflows for reservoirs and other water bodies.
 
 OWEN is collaboratively developed by researchers and partners at the Desert
-Research Institute, Texas A&M University, Virginia Tech, the Bureau of
-Reclamation, NASA, and the U.S. Geological Survey.
+Research Institute (DRI), Texas A&M University (TAMU), Virginia Tech University (VTech), the Bureau of
+Reclamation (Reclamation), National Aeronautics and Space Administration (NASA), and the U.S. Geological Survey (USGS).
 
 
 ## Access OWEN datasets
@@ -28,11 +28,11 @@ OWEN datasets vary in geographic coverage, meteorological inputs, reservoir
 parameters, update frequency, and intended application. All datasets use DLEM
 to estimate evaporation.
 
-| Dataset | Coverage and purpose | Status |
-| --- | --- | --- |
-| [Texas Water Development Board database](https://docs.openwaterevap.net/databases/twdb_db/) | Texas water bodies | Available |
-| [Bureau of Reclamation database](https://docs.openwaterevap.net/databases/usbr_db/) | Reclamation water bodies | Available |
-| CONUS database | More than 44,000 water bodies across the conterminous United States | Planned for 2026 |
+| Dataset                                                                             | Coverage and purpose | Status |
+|-------------------------------------------------------------------------------------| --- | --- |
+| [Texas database](https://docs.openwaterevap.net/databases/twdb_db/)                 | Texas water bodies | Available |
+| [Reclamation database](https://docs.openwaterevap.net/databases/usbr_db/) | Reclamation water bodies | Available |
+| CONUS database                                                                      | More than 44,000 water bodies across the conterminous United States | Planned for 2026 |
 
 
 ## Evaporation Databases
@@ -48,8 +48,8 @@ Open-water evaporation is a complex physical process affecting the water and
 energy budgets of lakes and reservoirs. Reliable estimates are important for
 water quality, water distribution, reservoir operations, and water accounting.
 
-Historically, many water-management agencies, including the Bureau of
-Reclamation (Reclamation), have used Class A evaporation pans for water-budget and accounting
+Historically, many water-management agencies, including Reclamation, have used Class A
+evaporation pans or static free water surface evaporation maps for water-budget and accounting
 applications. Although pans are relatively simple and inexpensive to maintain,
 their measurements can differ from evaporation from a lake or reservoir.
 One important reason is that Class A pans do not represent the heat storage of
@@ -59,9 +59,7 @@ characteristics such as depth and volume.
 
 ## Collaboration
 
-OWEN is developed in collaboration with the Bureau of Reclamation, Desert
-Research Institute, Texas A&M University, Virginia Tech, NASA, and the U.S.
-Geological Survey.
+OWEN is developed in collaboration with the Reclamation, DRI, TAMU, VTech, NASA, and the USGS.
 
 <center markdown>
 
