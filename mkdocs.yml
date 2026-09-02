@@ -133,7 +133,7 @@ nav:
   - Methods: methods.md
   - Databases:
       - Texas: databases/twdb_db.md
-      # - Reclamation: usbr_db.md
+      - Reclamation: databases/usbr_db.md
       # - CONUS: conus_db.md
   - Getting Started:
       - Overview: started/getting-started.md
