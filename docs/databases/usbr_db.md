@@ -8,7 +8,7 @@
 
 | Resource | Use it to | Access |
 |---|---|---|
-| Reservoir Web Explorer | View and compare reservoir evaporation, storage, and meteorological data. | [Open Explorer](hhttps://dri-apps.projects.earthengine.app/view/bor-reservoir-evaporation) |
+| Reservoir Web Explorer | View and compare reservoir evaporation, storage, and meteorological data. | [Open Explorer](https://dri-apps.projects.earthengine.app/view/bor-reservoir-evaporation) |
 | Reservoir Evaporation API | Retrieve data programmatically for analysis and integration. | [View API documentation](https://operevap.dri.edu/docs) |
 
 
