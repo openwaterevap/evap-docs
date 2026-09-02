@@ -22,12 +22,6 @@ Research Institute, Texas A&M University, Virginia Tech, the Bureau of
 Reclamation, NASA, and the U.S. Geological Survey.
 
 
-## Evaporation Databases
-
-OWEN provides both general and agency-specific datasets to support a wide range of operational, planning, and research use cases. The datasets are designed to support specific user needs, including access to near-real-time evaporation estimates, continuity across historical and current conditions, and forecasting applications.
-
-All OWEN datasets use the DLEM model to generate evaporation estimates. They differ in their meteorological forcing data, reservoir parameter information, geographic coverage, update frequency, and intended operational use. Together, these datasets provide flexible options for users who need consistent evaporation information for monitoring, water-management decisions, long-term analysis, and forward-looking planning.
-
 ## Access OWEN datasets
 
 OWEN datasets vary in geographic coverage, meteorological inputs, reservoir
@@ -39,6 +33,13 @@ to estimate evaporation.
 | [Texas Water Development Board database](https://docs.openwaterevap.net/databases/twdb_db/) | Texas water bodies | Available |
 | [Bureau of Reclamation database](https://docs.openwaterevap.net/databases/usbr_db/) | Reclamation water bodies | Available |
 | CONUS database | More than 44,000 water bodies across the conterminous United States | Planned for 2026 |
+
+
+## Evaporation Databases
+
+OWEN provides both general and agency-specific datasets to support a wide range of operational, planning, and research use cases. The datasets are designed to support specific user needs, including access to near-real-time evaporation estimates, continuity across historical and current conditions, and forecasting applications.
+
+All OWEN datasets use the DLEM model to generate evaporation estimates. They differ in their meteorological forcing data, reservoir parameter information, geographic coverage, update frequency, and intended operational use. Together, these datasets provide flexible options for users who need consistent evaporation information for monitoring, water-management decisions, long-term analysis, and forward-looking planning.
 
 
 ## About evaporation estimation
