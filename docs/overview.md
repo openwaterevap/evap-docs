@@ -2,16 +2,12 @@
 
 ![Lake Powell](images/powell_landscape_cropped.jpg){ width="800" }
 
-
-
-::: {.callout-warning}
 ## Beta status
 
 OWEN is under active development, and its evaporation estimates should be
 considered research-level products. Users should review the data, methods, and
 their suitability for the intended application before integrating estimates into
 operational decision-making or water-accounting workflows.
-:::
 
 
 ## Overview
@@ -25,19 +21,6 @@ OWEN is collaboratively developed by researchers and partners at the Desert
 Research Institute, Texas A&M University, Virginia Tech, the Bureau of
 Reclamation, NASA, and the U.S. Geological Survey.
 
-## About evaporation estimation
-
-Open-water evaporation is a complex physical process affecting the water and
-energy budgets of lakes and reservoirs. Reliable estimates are important for
-water quality, water distribution, reservoir operations, and water accounting.
-
-Historically, many water-management agencies, including the Bureau of
-Reclamation (Reclamation), have used Class A evaporation pans for water-budget and accounting
-applications. Although pans are relatively simple and inexpensive to maintain,
-their measurements can differ from evaporation from a lake or reservoir.
-One important reason is that Class A pans do not represent the heat storage of
-larger water bodies; the magnitude of this difference can vary with water-body
-characteristics such as depth and volume.
 
 ## Evaporation Databases
 
@@ -56,6 +39,21 @@ to estimate evaporation.
 | [Texas Water Development Board database](https://docs.openwaterevap.net/databases/twdb_db/) | Texas water bodies | Available |
 | [Bureau of Reclamation database](https://docs.openwaterevap.net/databases/usbr_db/) | Reclamation water bodies | Available |
 | CONUS database | More than 44,000 water bodies across the conterminous United States | Planned for 2026 |
+
+
+## About evaporation estimation
+
+Open-water evaporation is a complex physical process affecting the water and
+energy budgets of lakes and reservoirs. Reliable estimates are important for
+water quality, water distribution, reservoir operations, and water accounting.
+
+Historically, many water-management agencies, including the Bureau of
+Reclamation (Reclamation), have used Class A evaporation pans for water-budget and accounting
+applications. Although pans are relatively simple and inexpensive to maintain,
+their measurements can differ from evaporation from a lake or reservoir.
+One important reason is that Class A pans do not represent the heat storage of
+larger water bodies; the magnitude of this difference can vary with water-body
+characteristics such as depth and volume.
 
 
 ## Collaboration
