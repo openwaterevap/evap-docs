@@ -6,7 +6,6 @@
 |:---:|:---:|
 | ![Texas Water Development Board logo](../images/twdb_logo.jpg){ width="240" } | ![U.S. Army Corps of Engineers logo](../images/usace_logo.png){ width="160" } |
 
-
 ## Find the right resource
 
 | Resource | Use it to | Access |
@@ -65,4 +64,4 @@ See the [project report](URL) and [methods documentation](URL) for details.
 
 ¹ Meteorological forcing variables include air temperature, vapor pressure deficit,
 wind speed and direction, solar radiation, and air pressure. See the
-[Appendix](https://docs.openwaterevap.net/appendix/) for definitions.ls on forcing variables, refer to the [Appendix](https://docs.openwaterevap.net/appendix/).
+[Appendix](https://docs.openwaterevap.net/appendix/) for additional information and definitions.

@@ -65,7 +65,7 @@ Reclamation reservoirs.
 
 ¹ Meteorological forcing variables include air temperature, vapor pressure deficit,
 wind speed and direction, solar radiation, and air pressure. See the
-[Appendix](https://docs.openwaterevap.net/appendix/) for definitions.ls on forcing variables, refer to the [Appendix](https://docs.openwaterevap.net/appendix/).
+[Appendix](https://docs.openwaterevap.net/appendix/) for additional information and definitions.
 
 
 ² Reservoir elevation information is gathered from multiple sources including Reclamation’s Hydromet, United States Geological Survey (USGS) National Water Information System (NWIS),
