@@ -1,8 +1,9 @@
 # Examples
 
 This section provides example code snippets for common tasks using the Reservoir Evaporation API.
-
+<!--
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samapriya/evap-docs/blob/main/docs/notebooks/examples.ipynb)
+-->
 
 ## Setup
 ### Set up a virtual environment
@@ -26,7 +27,7 @@ pip install requests
 
     # API configuration
     API_KEY = "your_api_key_here"
-    BASE_URL = "https://operevap.dri.edu/"  # Replace with the actual API base URL
+    BASE_URL = "https://nasa-revap.dri.edu/"  # Replace with the actual API base URL
     HEADERS = {
         "api-key": API_KEY
     }

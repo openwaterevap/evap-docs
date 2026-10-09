@@ -28,7 +28,7 @@ Before using the API, you will need:
 All API requests should be made to the base URL of the API:
 
 ```
-https://operevap.dri.edu
+https://nasa-revap.dri.edu
 ```
 
 ## Request Format
@@ -44,7 +44,7 @@ params = {
     "end_date": "2020-01-31"
 }
 
-url = "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange"
+url = "https://nasa-revap.dri.edu/timeseries/daily/reservoirs/daterange"
 headers = {
     "api-key": "YOUR_API_KEY"
 }
@@ -73,7 +73,7 @@ params = {
     "output_format": "csv"
 }
 
-url = "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange"
+url = "https://nasa-revap.dri.edu/timeseries/daily/reservoirs/daterange"
 headers = {
     "api-key": "YOUR_API_KEY"
 }
@@ -106,7 +106,7 @@ params = {
     "units": "english"
 }
 
-url = "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange"
+url = "https://nasa-revap.dri.edu/timeseries/daily/reservoirs/daterange"
 headers = {
     "api-key": "YOUR_API_KEY"
 }
@@ -128,13 +128,13 @@ The API is organized into the following sections:
 ## Python Example
 
 A Python example for interacting with the API is available at:
-https://drive.google.com/drive/folders/1_JAM9JGwf40Tjo3fkx28mIP1tW5M55AO?usp=sharing
+https://drive.google.com/drive/folders/15GSkzjmITr_gxNndD5cjMNqj4cMx9dAc
 
 This example can help you get started with using the API in your Python applications.
 
 ## Next Steps
 
-1. [Request an API key](../started/authentication.md)
-2. Explore the available [reservoirs and stations](../endpoints/info-endpoints.md)
-3. Retrieve [metadata](../endpoints/metadata-endpoints.md) for your reservoirs of interest
-4. Retrieve [timeseries data](../endpoints/timeseries-endpoints.md) for your analysis
+1. [Request an API key](authentication.md)
+2. Explore the available [reservoirs and stations](info-endpoints.md)
+3. Retrieve [metadata](metadata-endpoints.md) for your reservoirs of interest
+4. Retrieve [timeseries data](timeseries-endpoints.md) for your analysis

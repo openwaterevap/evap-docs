@@ -51,7 +51,7 @@ Reservoir evaporation estimates integrate specific meteorological, hydrologic, a
 datasets to provide stakeholders with consistent, high-quality information for their intended use cases and
 applications. The following table summarizes the primary datasets used to develop reservoir evaporation estimates for the
 State of Texas.
-See the [project report](URL) and [methods documentation](URL) for details.
+See the [methods documentation](https://docs.openwaterevap.net/methods) for details.
 
 | Category | Source / product | Period | Use in this project | Link |
 |---|---|---:|---|---|
