@@ -38,10 +38,10 @@ Retrieves metadata for one or more reservoirs.
 
 ### Parameters
 
-| Parameter     | Type   | Description                                   | Default                |
-| ------------- | ------ | --------------------------------------------- | ---------------------- |
-| output_format | string | Response format (json or csv)                 | json                   |
-| RES_NAMES     | string | One or more reservoir names (comma-separated) | LAKE ALICE, LAKE ESTES |
+| Parameter     | Type   | Description                                   | Default                 |
+| ------------- | ------ | --------------------------------------------- |-------------------------|
+| output_format | string | Response format (json or csv)                 | json                    |
+| RES_NAMES     | string | One or more reservoir names (comma-separated) | CANYON LAKE, CADDO LAKE |
 
 ### Response
 

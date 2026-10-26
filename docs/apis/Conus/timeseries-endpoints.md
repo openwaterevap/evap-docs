@@ -21,7 +21,7 @@ Retrieves timeseries data for one or more reservoirs over a specified date range
         "api-key": "YOUR_API_KEY"
     }
     params = {
-        "RES_NAMES": "LAKE ALICE",
+        "OWEN_NAMES": "LAKE TRAVIS",
         "datasets": "nete-volume-calcs",
         "variables": "NetE,E_volume",
         "start_date": "2020-01-01",
@@ -42,22 +42,22 @@ Retrieves timeseries data for one or more reservoirs over a specified date range
     API_KEY="YOUR_API_KEY"
 
     # Get reservoir timeseries data
-    curl -X GET "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&output_format=json" \
+    curl -X GET "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
 ### Parameters
 
-| Parameter     | Type   | Description                                           | Default                                                                                                                                                                 |
-| ------------- | ------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RES_NAMES     | string | One or more reservoir names (comma-separated)         | LAKE ALICE, LAKE ESTES                                                                                                                                                  |
-| datasets      | string | One or more datasets (comma-separated)                | rtma, res, lem, nete-volume-calcs                                                                                                                                       |
-| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
-| units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
-| start_date    | string | Start date (yyyy-mm-dd)                               | 2020-01-01                                                                                                                                                              |
-| end_date      | string | End date (yyyy-mm-dd)                                 | 2020-01-31                                                                                                                                                              |
-| also_return   | string | Additional metadata attributes to include in response |                                                                                                                                                                         |
-| output_format | string | Response format (json or csv)                         | json                                                                                                                                                                    |
+| Parameter     | Type   | Description                                          | Default                                                                                                                                                                 |
+| ------------- | ------ | ---------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OWEN_NAMES     | string | One or more reservoir names (comma-separated)       | LAKE TRAVIS, LAKE TEXOMA                                                                                                                                                |
+| datasets      | string | One or more datasets (comma-separated)               | urma, res, lem, nete-volume-calcs                                                                                                                                       |
+| variables     | string | One or more variables (comma-separated)              | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
+| units         | string | Units for returned data (english or metric)          | metric                                                                                                                                                                  |
+| start_date    | string | Start date (yyyy-mm-dd)                              | 2020-01-01                                                                                                                                                              |
+| end_date      | string | End date (yyyy-mm-dd)                                | 2020-01-31                                                                                                                                                              |
+| also_return   | string | Additional metadata attributes to include in response|                                                                                                                                                                         |
+| output_format | string | Response format (json or csv)                        | json                                                                                                                                                                    |
 
 ### Response
 
@@ -65,7 +65,7 @@ Returns a list of dictionaries containing timeseries data for the specified rese
 
 ### Notes
 
-- Use the `/info/list_RES_NAMES` endpoint to discover available reservoir names.
+- Use the `/info/list_OWEN_NAMES` endpoint to discover available reservoir names.
 - Use the `/info/list_variables` endpoint to discover available variables for each dataset.
 - Use the `/info/list_dates` endpoint to discover the valid date range for each dataset and variable.
 
@@ -110,7 +110,7 @@ Retrieves timeseries data for all reservoirs on a single date.
 
 | Parameter     | Type   | Description                                           | Default                                                                                                                                                                 |
 | ------------- | ------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| datasets      | string | One or more datasets (comma-separated)                | rtma, res, lem, nete-volume-calcs                                                                                                                                       |
+| datasets      | string | One or more datasets (comma-separated)                | urma, res, lem, nete-volume-calcs                                                                                                                                       |
 | variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
 | date          | string | Date (yyyy-mm-dd)                                     | 2020-01-01                                                                                                                                                              |

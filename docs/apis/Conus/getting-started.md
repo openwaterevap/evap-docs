@@ -39,7 +39,7 @@ The API accepts request parameters as query parameters in the URL. Here's an exa
 import requests
 
 params = {
-    "RES_NAMES": "LAKE ALICE",
+    "OWEN_NAMES": "LAKE COMO",
     "start_date": "2020-01-01",
     "end_date": "2020-01-31"
 }
@@ -67,7 +67,7 @@ Example of requesting CSV output:
 import requests
 
 params = {
-    "RES_NAMES": "LAKE ALICE",
+    "OWEN_NAMES": "LAKE COMO",
     "start_date": "2020-01-01",
     "end_date": "2020-01-31",
     "output_format": "csv"
@@ -100,7 +100,7 @@ Example using English units:
 import requests
 
 params = {
-    "RES_NAMES": "LAKE ALICE",
+    "OWEN_NAMES": "LAKE COMO",
     "start_date": "2020-01-01",
     "end_date": "2020-01-31",
     "units": "english"

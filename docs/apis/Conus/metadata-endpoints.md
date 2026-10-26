@@ -16,7 +16,7 @@ Retrieves metadata for one or more reservoirs.
         "api-key": "YOUR_API_KEY"
     }
     params = {
-        "RES_NAMES": "LAKE ALICE,LAKE ESTES",
+        "OWEN_NAMES": "LAKE TRAVIS,LAKE TEXOMA",
         "output_format": "json"
     }
 
@@ -32,16 +32,16 @@ Retrieves metadata for one or more reservoirs.
     API_KEY="YOUR_API_KEY"
 
     # Get reservoir metadata
-    curl -X GET "https://operevap.dri.edu/metadata/reservoirs?RES_NAMES=LAKE%20ALICE,LAKE%20ESTES&output_format=json" \
+    curl -X GET "https://operevap.dri.edu/metadata/reservoirs?OWEN_NAMES=LAKE%20ALICE,LAKE%20ESTES&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
 ### Parameters
 
 | Parameter     | Type   | Description                                   | Default                |
-| ------------- | ------ | --------------------------------------------- | ---------------------- |
+|---------------| ------ | --------------------------------------------- | ---------------------- |
 | output_format | string | Response format (json or csv)                 | json                   |
-| RES_NAMES     | string | One or more reservoir names (comma-separated) | LAKE ALICE, LAKE ESTES |
+| OWEN_NAMES    | string | One or more reservoir names (comma-separated) | LAKE ALICE, LAKE ESTES |
 
 ### Response
 
@@ -55,7 +55,7 @@ Returns a list of dictionaries containing metadata information for the specified
 
 ### Notes
 
-Use the `/info/list_RES_NAMES` endpoint to discover available reservoir names.
+Use the `/info/list_OWEN_NAMES` endpoint to discover available reservoir names.
 
 ## Station Metadata
 
@@ -127,7 +127,7 @@ The metadata attributes can be included in timeseries responses by using the `al
         "api-key": "YOUR_API_KEY"
     }
     params = {
-        "RES_NAMES": "LAKE ALICE",
+        "OWEN_NAMES": "LAKE TRAVIS",
         "datasets": "nete-volume-calcs",
         "variables": "NetE,E_volume",
         "start_date": "2020-01-01",
@@ -149,7 +149,7 @@ The metadata attributes can be included in timeseries responses by using the `al
     API_KEY="YOUR_API_KEY"
 
     # Get timeseries data with metadata attributes
-    curl -X GET "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&also_return=qflag&output_format=json" \
+    curl -X GET "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&also_return=qflag&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 

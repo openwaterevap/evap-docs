@@ -328,7 +328,7 @@ pip install requests
         'srad (wm2)': 'mean'
     })
 
-    print("Monthly Weather Summary for LAKE POWELL (Summer 2020):")
+    print("Monthly Weather Summary for CADDO LAKE (Summer 2020):")
     print(f"Month | Total Precip (mm) | Avg Max Temp (°C) | Avg Min Temp (°C)")
     for idx, row in monthly_weather.iterrows():
         month = idx.strftime('%b %Y')

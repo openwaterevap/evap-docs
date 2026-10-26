@@ -2,7 +2,7 @@
 
 > Daily, near-real-time evaporation estimates and forecast products for Reclamation reservoirs.
 
-![USBR](../images/reclamation_wide_dark.jpg){ width="400" }
+![USBR](../images/reclamation_wide_dark.jpg)
 
 
 ## Data Access

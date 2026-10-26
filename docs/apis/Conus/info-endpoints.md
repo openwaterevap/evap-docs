@@ -84,7 +84,7 @@ Lists available variables for a specified dataset.
 | Parameter     | Type   | Description                                      | Default           |
 | ------------- | ------ | ------------------------------------------------ | ----------------- |
 | output_format | string | Response format (json or csv)                    | json              |
-| dataset       | string | Dataset name (rtma, res, lem, nete-volume-calcs) | nete-volume-calcs |
+| dataset       | string | Dataset name (urma, res, lem, nete-volume-calcs) | nete-volume-calcs |
 
 ### Response
 
@@ -130,7 +130,7 @@ Lists the minimum and maximum dates available for a dataset and variable.
 | Parameter     | Type   | Description                                      | Default           |
 | ------------- | ------ | ------------------------------------------------ | ----------------- |
 | output_format | string | Response format (json or csv)                    | json              |
-| dataset       | string | Dataset name (rtma, res, lem, nete-volume-calcs) | nete-volume-calcs |
+| dataset       | string | Dataset name (urma, res, lem, nete-volume-calcs) | nete-volume-calcs |
 | variable      | string | Variable name (see list_variables endpoint)      | NetE              |
 
 ### Response
@@ -139,14 +139,14 @@ Returns a list containing the start date and end date for the specified dataset 
 
 ## List Reservoir Names
 
-Lists available reservoir IDs (RES_NAME) that can be used in other API requests.
+Lists available reservoir IDs (OWEN_NAME) that can be used in other API requests.
 
 === "Python"
 
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_RES_NAMES"
+    url = "https://operevap.dri.edu/info/list_OWEN_NAMES"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -179,11 +179,11 @@ Lists available reservoir IDs (RES_NAME) that can be used in other API requests.
     API_KEY="YOUR_API_KEY"
 
     # Get reservoir names without shapefile
-    curl -X POST "https://operevap.dri.edu/info/list_RES_NAMES?output_format=json" \
+    curl -X POST "https://operevap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}"
 
     # Get reservoir names with shapefile (if needed)
-    curl -X POST "https://operevap.dri.edu/info/list_RES_NAMES?output_format=json" \
+    curl -X POST "https://operevap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}" \
          -F "shapefile_shp=@your_shapefile.shp" \
          -F "shapefile_dbf=@your_shapefile.dbf" \
@@ -203,7 +203,7 @@ Lists available reservoir IDs (RES_NAME) that can be used in other API requests.
 
 ### Response
 
-Returns a list of reservoir names that can be used as the `RES_NAMES` parameter in metadata and timeseries API requests.
+Returns a list of reservoir names that can be used as the `OWEN_NAMES` parameter in metadata and timeseries API requests.
 
 ### Notes
 

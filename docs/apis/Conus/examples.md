@@ -48,11 +48,11 @@ pip install requests
     ```python
     def get_reservoirs():
         """Get a list of available reservoirs."""
-        url = f"{BASE_URL}/info/list_RES_NAMES"
+        url = f"{BASE_URL}/info/list_OWEN_NAMES"
         response = requests.post(url, headers=HEADERS)
 
-        if response.status_code == 200 and "RES_NAMES" in response.json().keys():
-            return response.json()["RES_NAMES"]
+        if response.status_code == 200 and "OWEN_NAMES" in response.json().keys():
+            return response.json()["OWEN_NAMES"]
         else:
             print(f"Error: {response.status_code}")
             return None
@@ -71,7 +71,7 @@ pip install requests
 
     ```sh
     # Get a list of available reservoirs
-    curl -X POST "${BASE_URL}/info/list_RES_NAMES" \
+    curl -X POST "${BASE_URL}/info/list_OWEN_NAMES" \
          -H "api-key: ${API_KEY}" \
          -H "Content-Type: application/json"
     ```
@@ -85,7 +85,7 @@ pip install requests
         """Get metadata for specified reservoirs."""
         url = f"{BASE_URL}/metadata/reservoirs"
         params = {
-            "RES_NAMES": ",".join(reservoir_names),
+            "OWEN_NAMES": ",".join(reservoir_names),
             "output_format": "json"
         }
 
@@ -98,9 +98,9 @@ pip install requests
             return None
 
     # Example usage
-    reservoir_metadata = get_reservoir_metadata(["LAKE ALICE", "LAKE ESTES"])
+    reservoir_metadata = get_reservoir_metadata(["LAKE TRAVIS", "LAKE TEXOMA"])
     for res in reservoir_metadata:
-        print(f"Reservoir: {res['RES_NAME']}")
+        print(f"Reservoir: {res['OWEN_NAME']}")
         print(f"  Latitude: {res['LAT']}")
         print(f"  Longitude: {res['LON']}")
         print(f"  State: {res['Shape_Area']}")
@@ -110,7 +110,7 @@ pip install requests
 
     ```sh
     # Get metadata for specified reservoirs
-    curl -X GET "${BASE_URL}/metadata/reservoirs?RES_NAMES=LAKE%20ALICE,LAKE%20ESTES&output_format=json" \
+    curl -X GET "${BASE_URL}/metadata/reservoirs?OWEN_NAMES=LAKE%20TRAVIS,LAKE%20TEXOMA&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -123,7 +123,7 @@ pip install requests
         """Get timeseries data for a reservoir."""
         url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         params = {
-            "RES_NAMES": reservoir_name,
+            "OWEN_NAMES": reservoir_name,
             "datasets": "nete-volume-calcs",
             "variables": "NetE,E_volume",
             "start_date": start_date,
@@ -141,7 +141,7 @@ pip install requests
             return None
 
     # Example usage
-    data = get_reservoir_timeseries("LAKE ALICE", "2020-01-01", "2020-12-31")
+    data = get_reservoir_timeseries("LAKE TRAVIS", "2020-01-01", "2020-12-31")
 
     # Convert to pandas DataFrame for analysis
     df = pd.DataFrame(data)
@@ -151,7 +151,7 @@ pip install requests
     # Plot the data
     plt.figure(figsize=(12, 6))
     plt.plot(df.index, df['NetE (mm)'], label='Net Evaporation')
-    plt.title('Net Evaporation for LAKE ALICE (2020)')
+    plt.title('Net Evaporation for LAKE TRAVIS (2020)')
     plt.xlabel('Date')
     plt.ylabel('Net Evaporation (mm/day)')
     plt.legend()
@@ -164,7 +164,7 @@ pip install requests
 
     ```sh
     # Get timeseries data for a reservoir
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20TRAVIS&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -177,7 +177,7 @@ pip install requests
         """Compare a variable between multiple reservoirs."""
         url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         params = {
-            "RES_NAMES": ",".join(reservoir_names),
+            "OWEN_NAMES": ",".join(reservoir_names),
             "datasets": "nete-volume-calcs",
             "variables": variable,
             "start_date": start_date,
@@ -195,7 +195,7 @@ pip install requests
             return None
 
     # Example usage
-    reservoirs_to_compare = ["LAKE ALICE", "LAKE ESTES", "RUEDI RESERVOIR"]
+    reservoirs_to_compare = ["LAKE TRAVIS, "LAKE TEXOMA", "LAKE COMO"]
     comparison_data = compare_reservoirs(reservoirs_to_compare, "2020-06-01", "2020-08-31")
 
     # Process and visualize data
@@ -203,7 +203,7 @@ pip install requests
     df['start_date'] = pd.to_datetime(df['start_date'])
 
     # Pivot the data to have one column per reservoir
-    pivot_df = df.pivot_table(index='start_date', columns='RES_NAME', values='NetE (mm)')
+    pivot_df = df.pivot_table(index='start_date', columns='OWEN_NAME', values='NetE (mm)')
 
     # Plot the data
     plt.figure(figsize=(12, 6))
@@ -223,7 +223,7 @@ pip install requests
 
     ```sh
     # Compare evaporation between multiple reservoirs
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20ALICE,LAKE%20ESTES,RUEDI%20RESERVOIR&datasets=nete-volume-calcs&variables=NetE&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20TRAVIS,LAKE%20TEXOMA,LAKE%20COMO&datasets=nete-volume-calcs&variables=NetE&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -239,7 +239,7 @@ pip install requests
 
         url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         params = {
-            "RES_NAMES": reservoir_name,
+            "OWEN_NAMES": reservoir_name,
             "datasets": "nete-volume-calcs",
             "variables": "E_volume",
             "start_date": start_date,
@@ -266,12 +266,12 @@ pip install requests
             return None
 
     # Example usage
-    monthly_volumes = get_monthly_evaporation_volumes("LAKE MEAD", 2020)
+    monthly_volumes = get_monthly_evaporation_volumes("LAKE COMO", 2020)
 
     # Plot monthly volumes
     plt.figure(figsize=(12, 6))
     plt.bar(monthly_volumes.index, monthly_volumes['E_volume (m3)'])
-    plt.title('Monthly Evaporation Volumes for LAKE MEAD (2020)')
+    plt.title('Monthly Evaporation Volumes for LAKE COMO (2020)')
     plt.xlabel('Month')
     plt.ylabel('Evaporation Volume (cubic meters)')
     plt.grid(True)
@@ -283,7 +283,7 @@ pip install requests
 
     ```sh
     # Get monthly evaporation volumes data
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20MEAD&datasets=nete-volume-calcs&variables=E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20COMO&datasets=nete-volume-calcs&variables=E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -296,8 +296,8 @@ pip install requests
         """Get weather data for a reservoir."""
         url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         params = {
-            "RES_NAMES": reservoir_name,
-            "datasets": "rtma",
+            "OWEN_NAMES": reservoir_name,
+            "datasets": "urma",
             "variables": "pr,tmmx_c,tmmn_c,vpd_kpa,srad",
             "start_date": start_date,
             "end_date": end_date,
@@ -314,7 +314,7 @@ pip install requests
             return None
 
     # Example usage
-    weather_data = get_weather_data("LAKE POWELL", "2020-06-01", "2020-08-31")
+    weather_data = get_weather_data("LAKE COMO", "2020-06-01", "2020-08-31")
     df = pd.DataFrame(weather_data)
     df['start_date'] = pd.to_datetime(df['start_date'])
     df.set_index('start_date', inplace=True)
@@ -328,7 +328,7 @@ pip install requests
         'srad (wm2)': 'mean'
     })
 
-    print("Monthly Weather Summary for LAKE POWELL (Summer 2020):")
+    print("Monthly Weather Summary for LAKE COMO (Summer 2020):")
     print(f"Month | Total Precip (mm) | Avg Max Temp (°C) | Avg Min Temp (°C)")
     for idx, row in monthly_weather.iterrows():
         month = idx.strftime('%b %Y')
@@ -339,7 +339,7 @@ pip install requests
 
     ```sh
     # Get weather data for a reservoir
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20POWELL&datasets=rtma&variables=pr,tmmx_c,tmmn_c,vpd_kpa,srad&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20COMO&datasets=urma&variables=pr,tmmx_c,tmmn_c,vpd_kpa,srad&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -355,7 +355,7 @@ pip install requests
         # Get evaporation data
         evap_url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         evap_params = {
-            "RES_NAMES": reservoir_name,
+            "OWEN_NAMES": reservoir_name,
             "datasets": "nete-volume-calcs",
             "variables": "NetE",
             "start_date": start_date,
@@ -369,8 +369,8 @@ pip install requests
         # Get weather data
         weather_url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         weather_params = {
-            "RES_NAMES": reservoir_name,
-            "datasets": "rtma",
+            "OWEN_NAMES": reservoir_name,
+            "datasets": "urma",
             "variables": "tmmx_c",
             "start_date": start_date,
             "end_date": end_date,
@@ -386,10 +386,10 @@ pip install requests
 
             # Prepare data
             evap_data['date'] = pd.to_datetime(evap_data['start_date']).dt.strftime('%Y-%m-%d')
-            evap_data.set_index(['date', 'RES_NAME'], inplace=True)
+            evap_data.set_index(['date', 'OWEN_NAME'], inplace=True)
 
             weather_data['date'] = pd.to_datetime(weather_data['start_date']).dt.strftime('%Y-%m-%d')
-            weather_data.set_index(['date', 'RES_NAME'], inplace=True)
+            weather_data.set_index(['date', 'OWEN_NAME'], inplace=True)
 
             # Merge datasets
             combined_data = pd.merge(evap_data, weather_data, left_index=True, right_index=True)
@@ -400,7 +400,7 @@ pip install requests
             return None
 
     # Example usage
-    combined_data = combine_datasets("LAKE MEAD", "2020-06-01", "2020-08-31")
+    combined_data = combine_datasets("LAKE COMO", "2020-06-01", "2020-08-31")
     combined_data.reset_index(inplace=True)
     combined_data = combined_data[['tmmx_c (degC)', 'NetE (mm)']]
 
@@ -424,11 +424,11 @@ pip install requests
 
     ```sh
     # Get evaporation data
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20MEAD&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20COMO&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}" > evap_data.json
 
     # Get weather data
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20MEAD&datasets=rtma&variables=pr,tmmx_c,tmmn_c,vpd_kpa,srad&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20COMO&datasets=urma&variables=pr,tmmx_c,tmmn_c,vpd_kpa,srad&start_date=2020-06-01&end_date=2020-08-31&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}" > weather_data.json
 
     # Note: Further processing would need to be done with tools like jq or imported into another tool
@@ -443,7 +443,7 @@ pip install requests
         """Export data for multiple reservoirs to CSV."""
         url = f"{BASE_URL}/timeseries/daily/reservoirs/daterange"
         params = {
-            "RES_NAMES": ",".join(reservoir_names),
+            "OWEN_NAMES": ",".join(reservoir_names),
             "datasets": "nete-volume-calcs",
             "variables": "NetE,E_volume",
             "start_date": start_date,
@@ -465,7 +465,7 @@ pip install requests
             return False
 
     # Example usage
-    reservoir_list = ["LAKE POWELL", "LAKE MEAD", "FLAMING GORGE RESERVOIR"]
+    reservoir_list = ["LAKE TRAVIS", "LAKE TEXOMA", "LAKE COMO"]
     export_data_to_csv(reservoir_list, "2020-01-01", "2020-12-31", "colorado_river_basin_evaporation_2020.csv")
     ```
 
@@ -473,7 +473,7 @@ pip install requests
 
     ```sh
     # Export data to a file
-    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?RES_NAMES=LAKE%20POWELL,LAKE%20MEAD,FLAMING%20GORGE%20RESERVOIR&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=csv" \
+    curl -X GET "${BASE_URL}/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20TRAVIS,LAKE%20TEXOMA,LAKE%20COMO&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-12-31&units=metric&output_format=csv" \
          -H "api-key: ${API_KEY}" > colorado_river_basin_evaporation_2020.csv
     ```
 
