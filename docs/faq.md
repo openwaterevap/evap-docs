@@ -4,11 +4,17 @@
 
 There are three ways to access the data:
 
-1. The web application for data visualization
-   [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+1. The web applications for data visualization
+- **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation
+](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
+- **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+- **Conus**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
 
-2. The API Playground for data inspection
-   [https://operevap.dri.edu](https://operevap.dri.edu)
+2. The API Playgrounds for data inspection
+- **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
+- **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
+- **Conus**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
+
 
 
 ## How do I cite this dataset?

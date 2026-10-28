@@ -52,11 +52,14 @@ A FastAPI-based Application Programming Interface provides programmatic access t
 - Enables automated data retrieval and integration
 - Supports targeted data queries by reservoir, variable, and time period
 
-### Web Application (Earth Engine)
+### Web Applications (Earth Engine)
 
-An interactive web application built using the Earth Engine JavaScript API:
+An interactive web applications built using the Earth Engine JavaScript API:
 
-- **URL**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+- **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation
+](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
+- **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+- **Conus**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
 - Facilitates visualization and exploration of reservoir evaporation data
 - Interactive mapping and data analysis capabilities
 
