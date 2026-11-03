@@ -1,6 +1,6 @@
 # Info Endpoints
 
-The Info/Help endpoints provide information about the available data in the API, including datasets, variables, reservoirs, stations, and date ranges. These endpoints are useful for discovering what data is available and how to access it.
+The Info/Help endpoints provide information about the available data in the API, including datasets, forecast datasets, variables, reservoirs, and date ranges. These endpoints are useful for discovering what data is available and how to access it.
 
 ## List Date Range
 

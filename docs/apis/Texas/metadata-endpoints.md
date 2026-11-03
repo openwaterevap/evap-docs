@@ -1,6 +1,6 @@
 # Metadata Endpoints
 
-The metadata endpoints provide information about the reservoirs and stations available in the API. This metadata includes details such as location, physical characteristics, and other attributes.
+The metadata endpoints provide information about the reservoirs available in the API. This metadata includes details such as location, physical characteristics, and other attributes.
 
 ## Reservoir Metadata
 

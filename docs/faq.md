@@ -4,18 +4,20 @@
 
 There are three ways to access the data:
 
-1. The web applications for data visualization
-- **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation
-](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
-- **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
-- **Conus**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
+1. **Web applications** for data visualization
+    - **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
+    - **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+    - **Conus**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
 
-2. The API Playgrounds for data inspection
-- **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
-- **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
-- **Conus**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
+2. **API Playgrounds** for interactive data inspection
+    - **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
+    - **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
+    - **Conus**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
 
-
+3. **APIs** for programmatic access (requires an API key)
+    - **Texas**: [Getting Started](apis/Texas/getting-started.md)
+    - **Reclamation**: [Getting Started](apis/Reclamation/getting-started.md)
+    - **Conus**: [Getting Started](apis/Conus/getting-started.md)
 
 ## How do I cite this dataset?
 
@@ -49,21 +51,30 @@ Area, elevation, and volume information is not available in real-time for all re
 
 ## Reservoir area, elevation, and volume values disagree with internal or operational estimates from my agency?
 
-Reservoir AEV information is collated from numerous online databases and resources (see sources documentation here). In many cases, reservoir Area-Elevation-Volume information is updated based and updated bathymetric survey data that may not align with historical estimates. For consistency amongst each evaporation timeseries, the XXXX workflow uses elevation combined with the latest available AEV curves to estimate volume and area. Stakeholders should use the best available judgement when applying estimates and may choose to overwrite area, elevation, and volume information as needed.
+Reservoir AEV information is collated from numerous online databases and resources (see the data sources for [Texas](databases/texas_db.md#data-sources-and-model-forcings), [Reclamation](databases/reclamation_db.md#data-sources-and-model-forcings), and [Conus](databases/conus_db.md#data-sources-and-model-forcings)). In many cases, reservoir Area-Elevation-Volume information is updated based and updated bathymetric survey data that may not align with historical estimates. For consistency amongst each evaporation timeseries, the XXXX workflow uses elevation combined with the latest available AEV curves to estimate volume and area. Stakeholders should use the best available judgement when applying estimates and may choose to overwrite area, elevation, and volume information as needed.
 
 !!! note
     Depths greater than 20 m are treated the same within the DLEM heat storage routine; however, depths less than 20 meters are considered and will influence evaporation estimates.
 
 ## How can I obtain an API key?
 
+Each project (Texas, Reclamation, Conus) has its own API and requires its own API key.
+
 ![image](images/api_page.png)
 
-1. Go to [https://operevap.dri.edu](https://operevap.dri.edu)
+1. Go to the API Playground for your project:
+    - **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
+    - **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
+    - **Conus**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
 2. Click the down arrow by auth/request_key
 3. Click on "Try it out"
 4. Fill out the form
 5. Click 'Execute'
-6. Your API key will be issued within 24 hours via email
+6. Your API key will be emailed to you within 1 to 2 business days
+
+You can also request a key programmatically; see the Authentication page for
+[Texas](apis/Texas/authentication.md), [Reclamation](apis/Reclamation/authentication.md), or
+[Conus](apis/Conus/authentication.md).
 
 ## What do the data flags mean?
 

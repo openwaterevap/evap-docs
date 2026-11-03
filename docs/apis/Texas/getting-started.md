@@ -121,9 +121,9 @@ print(data)
 The API is organized into the following sections:
 
 1. **Auth** - Endpoints for requesting API keys
-2. **Help/Info** - Endpoints for discovering available datasets, variables, reservoirs, stations, and date ranges
-3. **Metadata** - Endpoints for retrieving metadata about reservoirs and stations
-4. **Timeseries** - Endpoints for retrieving timeseries data for reservoirs and stations
+2. **Help/Info** - Endpoints for discovering available datasets (including forecast datasets), variables, reservoirs, and date ranges, and for converting NWSLI IDs to reservoir names
+3. **Metadata** - Endpoints for retrieving metadata about reservoirs
+4. **Timeseries** - Endpoints for retrieving reservoir timeseries data, 28-day reservoir forecasts, and gridded pond evaporation for a point or polygon
 
 ## Python Example
 
@@ -135,6 +135,6 @@ This example can help you get started with using the API in your Python applicat
 ## Next Steps
 
 1. [Request an API key](authentication.md)
-2. Explore the available [reservoirs and stations](info-endpoints.md)
+2. Explore the available [reservoirs, datasets, and variables](info-endpoints.md)
 3. Retrieve [metadata](metadata-endpoints.md) for your reservoirs of interest
 4. Retrieve [timeseries data](timeseries-endpoints.md) for your analysis

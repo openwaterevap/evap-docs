@@ -29,7 +29,8 @@ air temperatures are cool, heat storage can increase evaporation rates. Daily ev
 ## Weather Forcing Data for DLEM
 
 Weather data used to force DLEM are derived primarily from the [gridMET](https://www.climatologylab.org/gridmet.html) and
-[Real-Time Mesoscale Analysis (RTMA)](https://www.nco.ncep.noaa.gov/pmb/products/rtma/) datasets. The specific dataset, configuration,
+[Real-Time Mesoscale Analysis (RTMA)](https://www.nco.ncep.noaa.gov/pmb/products/rtma/) datasets (Texas and Reclamation) or the
+[UnRestricted Mesoscale Analysis (URMA)](https://climateengine.org/datasets/climatehydrology/urma_daily_2500/) dataset (Conus). The specific dataset, configuration,
 and temporal coverage of forcing data may vary by project. Consult the relevant database documentation for project-specific details.
 
 The forcing variables include:

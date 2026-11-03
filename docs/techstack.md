@@ -1,4 +1,4 @@
-# OperEvap Tech Stack Documentation
+# OWEN Technical Stack
 
 ## System Overview
 
@@ -15,7 +15,7 @@ At the heart of the system is a powerful cloud computing infrastructure comprise
 
 ## System Architecture
 
-![System-Arch](https://i.imgur.com/ZtrIRdq.png)
+![System architecture](images/system_architecture.png)
 
 ## System Components
 
@@ -45,21 +45,27 @@ All system data is securely stored within a PostgreSQL database utilizing the Po
 
 ### API (FastAPI/Python)
 
-A FastAPI-based Application Programming Interface provides programmatic access to the geodatabase:
+FastAPI-based Application Programming Interfaces provide programmatic access to the geodatabases. Each project has its own API:
 
-- **Base URL**: [https://operevap.dri.edu](https://operevap.dri.edu)
-- **Documentation**: [https://operevap.launchpad.wiki/](https://operevap.launchpad.wiki/)
+| Project     | Base URL | Documentation |
+|-------------|----------|---------------|
+| Texas       | [https://twdb.dri.edu](https://twdb.dri.edu) | [Texas API](apis/Texas/getting-started.md) |
+| Reclamation | [https://operevap.dri.edu](https://operevap.dri.edu) | [Reclamation API](apis/Reclamation/getting-started.md) |
+| Conus       | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) | [Conus API](apis/Conus/getting-started.md) |
+
 - Enables automated data retrieval and integration
 - Supports targeted data queries by reservoir, variable, and time period
 
 ### Web Applications (Earth Engine)
 
-An interactive web applications built using the Earth Engine JavaScript API:
+Interactive web applications built using the Earth Engine JavaScript API:
 
-- **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation
-](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
-- **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
-- **Conus**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
+| Project     | Web application |
+|-------------|-----------------|
+| Texas       | [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation) |
+| Reclamation | [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation) |
+| Conus       | [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap) |
+
 - Facilitates visualization and exploration of reservoir evaporation data
 - Interactive mapping and data analysis capabilities
 

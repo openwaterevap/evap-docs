@@ -121,9 +121,9 @@ print(data)
 The API is organized into the following sections:
 
 1. **Auth** - Endpoints for requesting API keys
-2. **Help/Info** - Endpoints for discovering available datasets, variables, reservoirs, stations, and date ranges
+2. **Help/Info** - Endpoints for discovering available datasets (including forecast datasets), variables, reservoirs, stations, and date ranges
 3. **Metadata** - Endpoints for retrieving metadata about reservoirs and stations
-4. **Timeseries** - Endpoints for retrieving timeseries data for reservoirs and stations
+4. **Timeseries** - Endpoints for retrieving timeseries data for reservoirs and stations, and 28-day reservoir forecasts
 
 ## Python Example
 

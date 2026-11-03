@@ -136,7 +136,6 @@ nav:
       - Texas: databases/texas_db.md
       - Reclamation: databases/reclamation_db.md
       - Conus: databases/conus_db.md
-      # - CONUS: conus_db.md
   - APIs:
       - Texas:
         - Authentication: apis/Texas/authentication.md
@@ -146,6 +145,7 @@ nav:
             - Metadata Endpoints: apis/Texas/metadata-endpoints.md
             - Time Series Endpoints: apis/Texas/timeseries-endpoints.md
         - Examples: apis/Texas/examples.md
+        - API Playground: https://twdb.dri.edu/
       - Reclamation:
         - Authentication: apis/Reclamation/authentication.md
         - Getting Started: apis/Reclamation/getting-started.md
@@ -163,6 +163,7 @@ nav:
           - Metadata Endpoints: apis/Conus/metadata-endpoints.md
           - Time Series Endpoints: apis/Conus/timeseries-endpoints.md
         - Examples: apis/Conus/examples.md
+        - API Playground: https://nasa-revap.dri.edu/
 
   - Appendix: appendix.md
   - FAQ: faq.md

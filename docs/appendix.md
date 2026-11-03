@@ -19,7 +19,7 @@ The following variables are available for reservoirs across different datasets:
 | sph_kgkg | Specific humidity | kg/kg | kg/kg |
 | pres_pa | Air pressure | Pa | Pa |
 
-*Pre-2016 weather data is derived from the hybrid RTMA-gridMET dataset. See the [Methods](https://operevap.launchpad.wiki/methods/) section for additional details.
+*Pre-2016 weather data (Texas and Reclamation) is derived from the hybrid RTMA-gridMET dataset. See the [Methods](methods.md) section for additional details.
 
 #### RES Dataset (Reservoir Physical Variables)
 | Variable | Description | Units (Metric) | Units (English) |
