@@ -4,7 +4,7 @@
 ## Installation
 - Clone the repository
 ```
-git clone https://github.com/OperEvap/evap-docs
+git clone https://github.com/openwaterevap/evap-docs
   
 ```
 

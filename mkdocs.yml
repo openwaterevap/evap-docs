@@ -2,7 +2,7 @@ site_name: Open Water Evaporation Network
 site_description: OWEN Documentation
 
 site_author: Desert Research Institute
-site_url: https://github.com/openwaterevap/evap-docs
+site_url: https://docs.openwaterevap.net/
 
 # Repository
 repo_name: evap-docs
@@ -102,13 +102,11 @@ markdown_extensions:
   - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
+      user: openwaterevap
+      repo: evap-docs
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -137,6 +135,7 @@ nav:
       - Reclamation: databases/reclamation_db.md
       - Conus: databases/conus_db.md
   - APIs:
+      - Overview: apis/overview.md
       - Texas:
         - Authentication: apis/Texas/authentication.md
         - Getting Started: apis/Texas/getting-started.md
@@ -145,6 +144,7 @@ nav:
             - Metadata Endpoints: apis/Texas/metadata-endpoints.md
             - Time Series Endpoints: apis/Texas/timeseries-endpoints.md
         - Examples: apis/Texas/examples.md
+        - Appendix: apis/Texas/appendix.md
         - API Playground: https://twdb.dri.edu/
       - Reclamation:
         - Authentication: apis/Reclamation/authentication.md
@@ -154,6 +154,7 @@ nav:
             - Metadata Endpoints: apis/Reclamation/metadata-endpoints.md
             - Time Series Endpoints: apis/Reclamation/timeseries-endpoints.md
         - Examples: apis/Reclamation/examples.md
+        - Appendix: apis/Reclamation/appendix.md
         - API Playground: https://playground.openwaterevap.net/
       - Conus:
         - Authentication: apis/Conus/authentication.md
@@ -163,9 +164,9 @@ nav:
           - Metadata Endpoints: apis/Conus/metadata-endpoints.md
           - Time Series Endpoints: apis/Conus/timeseries-endpoints.md
         - Examples: apis/Conus/examples.md
+        - Appendix: apis/Conus/appendix.md
         - API Playground: https://nasa-revap.dri.edu/
 
-  - Appendix: appendix.md
   - FAQ: faq.md
   - Contact: contact.md
   - License: license.md

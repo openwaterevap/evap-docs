@@ -27,7 +27,7 @@ pip install requests
 
     # API configuration
     API_KEY = "your_api_key_here"
-    BASE_URL = "https://nasa-revap.dri.edu/"  # Replace with the actual API base URL
+    BASE_URL = "https://nasa-revap.dri.edu"
     HEADERS = {
         "api-key": API_KEY
     }
@@ -38,7 +38,7 @@ pip install requests
     ```sh
     # Store your API key and base URL for reuse
     API_KEY="your_api_key_here"
-    BASE_URL="https://api-url.example"  # Replace with the actual API base URL
+    BASE_URL="https://nasa-revap.dri.edu"
     ```
 
 ## Get Available Reservoirs
