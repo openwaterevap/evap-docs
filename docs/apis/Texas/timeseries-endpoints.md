@@ -53,7 +53,7 @@ Retrieves timeseries data for one or more reservoirs over a specified date range
 | ------------- | ------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RES_NAMES     | string | One or more reservoir names (comma-separated)         |                                                                                                                                                  |
 | datasets      | string | One or more datasets (comma-separated)                | rtma, res, lem, nete-volume-calcs                                                                                                                                       |
-| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
+| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
 | start_date    | string | Start date (yyyy-mm-dd)                               | 2020-01-01                                                                                                                                                              |
 | end_date      | string | End date (yyyy-mm-dd)                                 | 2020-01-31                                                                                                                                                              |
@@ -105,8 +105,8 @@ Retrieves forecast timeseries data for one or more reservoirs over a specified d
     # Set your API key
     API_KEY="YOUR_API_KEY"
 
-    # Get reservoir timeseries data
-    curl -X GET "https://twdb.dri.edu/timeseries/forecast/daily/reservoirs/daterange?RES_NAMES=CANYON%20LAKE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&output_format=json" \
+    # Get reservoir forecast timeseries data
+    curl -X GET "https://twdb.dri.edu/timeseries/forecast/daily/reservoirs/daterange?RES_NAMES=CANYON%20LAKE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2026-10-01&end_date=2026-10-10&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -116,10 +116,10 @@ Retrieves forecast timeseries data for one or more reservoirs over a specified d
 | ------------- | ------ | ----------------------------------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | RES_NAMES     | string | One or more reservoir names (comma-separated)         |                                                                                                                                                                        |
 | datasets      | string | One or more datasets (comma-separated)                | cfs_gridmet, res, lem, nete-volume-calcs                                                                                                                               |
-| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
+| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                 |
-| start_date    | string | Start date (yyyy-mm-dd)                               | 2020-01-01                                                                                                                                                             |
-| end_date      | string | End date (yyyy-mm-dd)                                 | 2020-01-31                                                                                                                                                             |
+| start_date    | string | Start date (yyyy-mm-dd)                               | see `/info/list_forecast_dates`                                                                                                                                                             |
+| end_date      | string | End date (yyyy-mm-dd)                                 | see `/info/list_forecast_dates`                                                                                                                                                             |
 | also_return   | string | Additional metadata attributes to include in response |                                                                                                                                                                        |
 | output_format | string | Response format (json or csv)                         | json                                                                                                                                                                   |
 
@@ -130,8 +130,8 @@ Returns a list of dictionaries containing timeseries data for the specified rese
 ### Notes
 
 - Use the `/info/list_RES_NAMES` endpoint to discover available reservoir names.
-- Use the `/info/list_variables` endpoint to discover available variables for each dataset.
-- Use the `/info/list_dates` endpoint to discover the valid date range for each dataset and variable.
+- Use the `/info/list_forecast_datasets` and `/info/list_forecast_variables` endpoints to discover available forecast datasets and variables.
+- Use the `/info/list_forecast_dates` endpoint to discover the valid forecast date range. Forecast data is only available for a rolling window, so the example dates may need to be updated.
 
 ## Reservoir Timeseries Data (Single Date)
 
@@ -175,7 +175,7 @@ Retrieves timeseries data for all reservoirs on a single date.
 | Parameter     | Type   | Description                                           | Default                                                                                                                                                                 |
 | ------------- | ------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | datasets      | string | One or more datasets (comma-separated)                | rtma, res, lem, nete-volume-calcs                                                                                                                                       |
-| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
+| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
 | date          | string | Date (yyyy-mm-dd)                                     | 2020-01-01                                                                                                                                                              |
 | also_return   | string | Additional metadata attributes to include in response |                                                                                                                                                                         |
@@ -217,8 +217,8 @@ Retrieves forecast timeseries data for all reservoirs on a single date.
     # Set your API key
     API_KEY="YOUR_API_KEY"
 
-    # Get reservoir data for a single date
-    curl -X GET "https://twdb.dri.edu/timeseries/forecast/daily/reservoirs/date?datasets=nete-volume-calcs&variables=NetE,E_volume&date=2020-01-01&units=metric&output_format=json" \
+    # Get reservoir forecast data for a single date
+    curl -X GET "https://twdb.dri.edu/timeseries/forecast/daily/reservoirs/date?datasets=nete-volume-calcs&variables=NetE,E_volume&date=2026-10-15&units=metric&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -227,9 +227,9 @@ Retrieves forecast timeseries data for all reservoirs on a single date.
 | Parameter     | Type   | Description                                           | Default                                                                                                                                                                 |
 | ------------- | ------ | ----------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | datasets      | string | One or more datasets (comma-separated)                | cfs_gridmet, res, lem, nete-volume-calcs                                                                                                                                |
-| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres_pa, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
+| variables     | string | One or more variables (comma-separated)               | pr, tmmx_c, tmmn_c, vpd_kpa, vs2m, srad, etr, eto, th, sph_kgkg, pres, stage_m, area_m2, depth_m, E_hs, E_nhs, Rn, Tw, Tw0, Fetch, Lerr, NetE, E_volume, NetE_volume |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
-| date          | string | Date (yyyy-mm-dd)                                     | 2020-01-01                                                                                                                                                              |
+| date          | string | Date (yyyy-mm-dd)                                     | see `/info/list_forecast_dates`                                                                                                                                                              |
 | also_return   | string | Additional metadata attributes to include in response |                                                                                                                                                                         |
 | output_format | string | Response format (json or csv)                         | json                                                                                                                                                                    |
 
@@ -246,7 +246,7 @@ Retrieves timeseries data for one point over a specified date range.
     ```python
     import requests
 
-    url = "https://twdb.dri.edu/timeseries/daily/point/pond_devaporation/daterange"
+    url = "https://twdb.dri.edu/timeseries/daily/point/pond_evaporation/daterange"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -270,8 +270,8 @@ Retrieves timeseries data for one point over a specified date range.
     # Set your API key
     API_KEY="YOUR_API_KEY"
 
-    # Get reservoir timeseries data
-    curl -X GET "https://twdb.dri.edu/timeseries/daily/point/pond_devaporation/daterange?latitude=30.325&longitude=-95.325&units=metric&start_date=2020-01-01&end_date=2020-01-31&output_format=json" \
+    # Get pond evaporation for a point
+    curl -X GET "https://twdb.dri.edu/timeseries/daily/point/pond_evaporation/daterange?latitude=30.325&longitude=-95.325&units=metric&start_date=2020-01-01&end_date=2020-01-31&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -279,8 +279,8 @@ Retrieves timeseries data for one point over a specified date range.
 
 | Parameter     | Type   | Description                                           | Default                                                                                                                                                                 |
 |---------------| ------ |-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| latitude      | string | latitude                                              | 30.325                                                                                                                                                                  |
-| longitude     | string | longitude                                             | -95.325                                                                                                                                       |
+| latitude      | string | Latitude (decimal degrees)                            | 30.325                                                                                                                                                                  |
+| longitude     | string | Longitude (decimal degrees)                           | -95.325                                                                                                                                       |
 | units         | string | Units for returned data (english or metric)           | metric                                                                                                                                                                  |
 | start_date    | string | Start date (yyyy-mm-dd)                               | 2020-01-01                                                                                                                                                              |
 | end_date      | string | End date (yyyy-mm-dd)                                 | 2020-01-31                                                                                                                                                              |
@@ -299,12 +299,12 @@ Retrieves timeseries data for one Polygon over a specified date range.
     ```python
     import requests
 
-    url = "https://twdb.dri.edu/timeseries/daily/polygon/pond_devaporation/daterange"
+    url = "https://twdb.dri.edu/timeseries/daily/polygon/pond_evaporation/daterange"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
     params = {
-        "polygon_coordinates": "[[-102.0, 30.0], [-102.0, 30.2], [-101.9, 30.0], [-101.9, 30.2], [-102.0, 30.00]]",
+        "polygon_coordinates": "[[-102.0, 30.0], [-102.0, 30.2], [-101.9, 30.2], [-101.9, 30.0], [-102.0, 30.0]]",
         "units": "metric",
         "start_date": "2020-01-01",
         "end_date": "2020-01-31",
@@ -322,8 +322,8 @@ Retrieves timeseries data for one Polygon over a specified date range.
     # Set your API key
     API_KEY="YOUR_API_KEY"
 
-    # Get reservoir timeseries data
-    curl -X GET "https://twdb.dri.edu/timeseries/daily/polygon/pond_devaporation/daterange?%5B%5B-102.0%2C%2030.0%5D%2C%20%5B-102.0%2C%2030.2%5D%2C%20%5B-101.9%2C%2030.0%5D%2C%20%5B-101.9%2C%2030.2%5D%2C%20%5B-102.0%2C%2030.00%5D%5D&units=metric&start_date=2020-01-01&end_date=2020-01-31&output_format=json" \
+    # Get pond evaporation for a polygon
+    curl -X GET "https://twdb.dri.edu/timeseries/daily/polygon/pond_evaporation/daterange?polygon_coordinates=%5B%5B-102.0%2C%2030.0%5D%2C%20%5B-102.0%2C%2030.2%5D%2C%20%5B-101.9%2C%2030.2%5D%2C%20%5B-101.9%2C%2030.0%5D%2C%20%5B-102.0%2C%2030.0%5D%5D&units=metric&start_date=2020-01-01&end_date=2020-01-31&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -331,7 +331,7 @@ Retrieves timeseries data for one Polygon over a specified date range.
 
 | Parameter           | Type   | Description                                 | Default                                                                                                                                                           |
 |---------------------| ------ |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| polygon_coordinates | string | list of lat, lon coordinates                | [[-102.0, 30.0], [-102.0, 30.2], [-101.9, 30.0], [-101.9, 30.2], [-102.0, 30.00]]                                                                                                                                                                  |
+| polygon_coordinates | string | List of [longitude, latitude] pairs forming a closed polygon | [[-102.0, 30.0], [-102.0, 30.2], [-101.9, 30.2], [-101.9, 30.0], [-102.0, 30.0]]                                                                                                                                                                  |
 | units               | string | Units for returned data (english or metric) | metric                                                                                                                                                            |
 | start_date          | string | Start date (yyyy-mm-dd)                     | 2020-01-01                                                                                                                                                        |
 | end_date            | string | End date (yyyy-mm-dd)                       | 2020-01-31                                                                                                                                                        |

@@ -90,8 +90,8 @@ Lists the minimum and maximum dates available for a dataset and variable.
 | Parameter     | Type   | Description                                      | Default           |
 | ------------- | ------ | ------------------------------------------------ | ----------------- |
 | output_format | string | Response format (json or csv)                    | json              |
-| dataset       | string | Dataset name (rtma, res, lem, nete-volume-calcs) | nete-volume-calcs |
-| variable      | string | Variable name (see list_variables endpoint)      | NetE              |
+| dataset       | string | Dataset name (cfs_gridmet, res, lem, nete-volume-calcs) | nete-volume-calcs |
+| variable      | string | Variable name (see list_forecast_variables endpoint) | NetE          |
 
 ### Response
 
@@ -185,11 +185,11 @@ Converts NWSLI_IDs to RES_NAMES, for use as RES_NAMES parameter in API requests.
         "api-key": "YOUR_API_KEY"
     }
     params = {
-        "output_format": "json"  # or "csv",
-        "NWSLI_IDs": "PLCT2, DDET2"  # One or more reservoir names (comma-separated)
+        "output_format": "json",  # or "csv"
+        "NWSLI_IDs": "PLCT2, DDET2"  # One or more NWSLI IDs (comma-separated)
     }
 
-    response = requests.post(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params)
     data = response.json()
     print(data)
     ```
@@ -200,8 +200,8 @@ Converts NWSLI_IDs to RES_NAMES, for use as RES_NAMES parameter in API requests.
     # Set your API key
     API_KEY="YOUR_API_KEY"
 
-    # Get reservoir names without shapefile
-    curl -X POST "https://twdb.dri.edu/info/convert_NWSLI_IDsS?output_format=json&NWSLI_IDs=PLCT2,DDET2" \
+    # Convert NWSLI IDs to reservoir names
+    curl -X GET "https://twdb.dri.edu/info/convert_NWSLI_IDs?output_format=json&NWSLI_IDs=PLCT2,DDET2" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -210,7 +210,7 @@ Converts NWSLI_IDs to RES_NAMES, for use as RES_NAMES parameter in API requests.
 | Parameter     | Type   | Description                                         | Default |
 | ------------- | ------ | --------------------------------------------------- | ------- |
 | output_format | string | Response format (json or csv)                       | json    |
-| NWSLI_IDs     | string | One or more reservoir names (comma-separated)       |         |
+| NWSLI_IDs     | string | One or more NWSLI IDs (comma-separated)             |         |
 
 
 ### Response
@@ -389,7 +389,7 @@ Lists available variables for a specified forecast dataset.
 | Parameter     | Type   | Description                                      | Default           |
 | ------------- | ------ | ------------------------------------------------ | ----------------- |
 | output_format | string | Response format (json or csv)                    | json              |
-| dataset       | string | Dataset name (rtma, res, lem, nete-volume-calcs) | nete-volume-calcs |
+| dataset       | string | Dataset name (cfs_gridmet, res, lem, nete-volume-calcs) | nete-volume-calcs |
 
 ### Response
 

@@ -11,7 +11,7 @@ Retrieves metadata for one or more reservoirs.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/metadata/reservoirs"
+    url = "https://nasa-revap.dri.edu/metadata/reservoirs"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -32,7 +32,7 @@ Retrieves metadata for one or more reservoirs.
     API_KEY="YOUR_API_KEY"
 
     # Get reservoir metadata
-    curl -X GET "https://operevap.dri.edu/metadata/reservoirs?OWEN_NAMES=LAKE%20ALICE,LAKE%20ESTES&output_format=json" \
+    curl -X GET "https://nasa-revap.dri.edu/metadata/reservoirs?OWEN_NAMES=LAKE%20TRAVIS,LAKE%20TEXOMA&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -41,7 +41,7 @@ Retrieves metadata for one or more reservoirs.
 | Parameter     | Type   | Description                                   | Default                |
 |---------------| ------ | --------------------------------------------- | ---------------------- |
 | output_format | string | Response format (json or csv)                 | json                   |
-| OWEN_NAMES    | string | One or more reservoir names (comma-separated) | LAKE ALICE, LAKE ESTES |
+| OWEN_NAMES    | string | One or more reservoir names (comma-separated) | LAKE TRAVIS, LAKE TEXOMA |
 
 ### Response
 
@@ -66,7 +66,7 @@ Retrieves metadata for one or more stations.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/metadata/stations"
+    url = "https://nasa-revap.dri.edu/metadata/stations"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -87,7 +87,7 @@ Retrieves metadata for one or more stations.
     API_KEY="YOUR_API_KEY"
 
     # Get station metadata
-    curl -X GET "https://operevap.dri.edu/metadata/stations?STA_NAMES=ABERDEEN_STATION,ABIQUIU%20DAM_STATION&output_format=json" \
+    curl -X GET "https://nasa-revap.dri.edu/metadata/stations?STA_NAMES=ABERDEEN_STATION,ABIQUIU%20DAM_STATION&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -122,7 +122,7 @@ The metadata attributes can be included in timeseries responses by using the `al
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange"
+    url = "https://nasa-revap.dri.edu/timeseries/daily/reservoirs/daterange"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -149,7 +149,7 @@ The metadata attributes can be included in timeseries responses by using the `al
     API_KEY="YOUR_API_KEY"
 
     # Get timeseries data with metadata attributes
-    curl -X GET "https://operevap.dri.edu/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20ALICE&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&also_return=qflag&output_format=json" \
+    curl -X GET "https://nasa-revap.dri.edu/timeseries/daily/reservoirs/daterange?OWEN_NAMES=LAKE%20TRAVIS&datasets=nete-volume-calcs&variables=NetE,E_volume&start_date=2020-01-01&end_date=2020-01-31&units=metric&also_return=qflag&output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 

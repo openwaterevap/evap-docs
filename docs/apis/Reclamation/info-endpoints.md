@@ -290,7 +290,7 @@ Lists available variables for stations.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_stations_variables"
+    url = "https://operevap.dri.edu/info/list_station_variables"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -311,7 +311,7 @@ Lists available variables for stations.
     API_KEY="YOUR_API_KEY"
 
     # Get station variables
-    curl -X GET "https://operevap.dri.edu/info/list_stations_variables?output_format=json&STA_NAMES=ALL_STATIONS" \
+    curl -X GET "https://operevap.dri.edu/info/list_station_variables?output_format=json&STA_NAMES=ALL_STATIONS" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -335,7 +335,7 @@ Lists the minimum and maximum dates available for stations in the database.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_stations_dates"
+    url = "https://operevap.dri.edu/info/list_station_dates"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -356,7 +356,7 @@ Lists the minimum and maximum dates available for stations in the database.
     API_KEY="YOUR_API_KEY"
 
     # Get station date range
-    curl -X GET "https://operevap.dri.edu/info/list_stations_dates?output_format=json&STA_NAMES=ALL_STATIONS" \
+    curl -X GET "https://operevap.dri.edu/info/list_station_dates?output_format=json&STA_NAMES=ALL_STATIONS" \
          -H "api-key: ${API_KEY}"
     ```
 

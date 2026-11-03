@@ -30,9 +30,9 @@ to estimate evaporation.
 
 | Dataset                                                                             | Coverage and purpose | Status |
 |-------------------------------------------------------------------------------------| --- | --- |
-| [Texas database](https://docs.openwaterevap.net/databases/twdb_db/)                 | Texas water bodies | Available |
-| [Reclamation database](https://docs.openwaterevap.net/databases/usbr_db/) | Reclamation water bodies | Available |
-| CONUS database                                                                      | More than 44,000 water bodies across the conterminous United States | Planned for 2026 |
+| [Texas database](databases/texas_db.md)                 | Texas water bodies | Available |
+| [Reclamation database](databases/reclamation_db.md) | Reclamation water bodies | Available |
+| [CONUS database](databases/conus_db.md) | More than 44,000 water bodies across the conterminous United States | Planned for 2027 |
 
 
 ## Evaporation Databases

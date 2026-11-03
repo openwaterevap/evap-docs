@@ -11,7 +11,7 @@ Lists all available datasets in the API.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_datasets"
+    url = "https://nasa-revap.dri.edu/info/list_datasets"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -31,7 +31,50 @@ Lists all available datasets in the API.
     API_KEY="YOUR_API_KEY"
 
     # Get available datasets
-    curl -X GET "https://operevap.dri.edu/info/list_datasets?output_format=json" \
+    curl -X GET "https://nasa-revap.dri.edu/info/list_datasets?output_format=json" \
+         -H "api-key: ${API_KEY}"
+    ```
+
+### Parameters
+
+| Parameter     | Type   | Description                   | Default |
+| ------------- | ------ | ----------------------------- | ------- |
+| output_format | string | Response format (json or csv) | json    |
+
+### Response
+
+Returns a list of dataset names that can be used as the `dataset` parameter in other API requests.
+
+## List Available Forecast Datasets
+
+Lists all available forecast datasets in the API.
+
+=== "Python"
+
+    ```python
+    import requests
+
+    url = "https://nasa-revap.dri.edu/info/list_forecast_datasets"
+    headers = {
+        "api-key": "YOUR_API_KEY"
+    }
+    params = {
+        "output_format": "json"  # or "csv"
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    data = response.json()
+    print(data)
+    ```
+
+=== "cURL"
+
+    ```sh
+    # Set your API key
+    API_KEY="YOUR_API_KEY"
+
+    # Get available datasets
+    curl -X GET "https://nasa-revap.dri.edu/info/list_forecast_datasets?output_format=json" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -54,7 +97,7 @@ Lists available variables for a specified dataset.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_variables"
+    url = "https://nasa-revap.dri.edu/info/list_variables"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -75,7 +118,7 @@ Lists available variables for a specified dataset.
     API_KEY="YOUR_API_KEY"
 
     # Get available variables for a dataset
-    curl -X GET "https://operevap.dri.edu/info/list_variables?output_format=json&dataset=nete-volume-calcs" \
+    curl -X GET "https://nasa-revap.dri.edu/info/list_variables?output_format=json&dataset=nete-volume-calcs" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -90,6 +133,52 @@ Lists available variables for a specified dataset.
 
 Returns a list of dictionaries containing variable information. The `api_name` field in each dictionary can be used as the `variable` parameter in other API requests.
 
+## List Available Forecast Variables
+
+Lists available variables for a specified forecast dataset.
+
+=== "Python"
+
+    ```python
+    import requests
+
+    url = "https://nasa-revap.dri.edu/info/list_forecast_variables"
+    headers = {
+        "api-key": "YOUR_API_KEY"
+    }
+    params = {
+        "output_format": "json",  # or "csv"
+        "dataset": "nete-volume-calcs"  # Dataset name
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    data = response.json()
+    print(data)
+    ```
+
+=== "cURL"
+
+    ```sh
+    # Set your API key
+    API_KEY="YOUR_API_KEY"
+
+    # Get available variables for a dataset
+    curl -X GET "https://nasa-revap.dri.edu/info/list_forecast_variables?output_format=json&dataset=nete-volume-calcs" \
+         -H "api-key: ${API_KEY}"
+    ```
+
+### Parameters
+
+| Parameter     | Type   | Description                                      | Default           |
+| ------------- | ------ | ------------------------------------------------ | ----------------- |
+| output_format | string | Response format (json or csv)                    | json              |
+| dataset       | string | Dataset name (cfs_gridmet, res, lem, nete-volume-calcs) | nete-volume-calcs |
+
+### Response
+
+Returns a list of dictionaries containing variable information. 
+The `api_name` field in each dictionary can be used as the `variable` parameter in other API requests.
+
 ## List Date Range
 
 Lists the minimum and maximum dates available for a dataset and variable.
@@ -99,7 +188,7 @@ Lists the minimum and maximum dates available for a dataset and variable.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_dates"
+    url = "https://nasa-revap.dri.edu/info/list_dates"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -121,7 +210,7 @@ Lists the minimum and maximum dates available for a dataset and variable.
     API_KEY="YOUR_API_KEY"
 
     # Get date range for a dataset and variable
-    curl -X GET "https://operevap.dri.edu/info/list_dates?output_format=json&dataset=nete-volume-calcs&variable=NetE" \
+    curl -X GET "https://nasa-revap.dri.edu/info/list_dates?output_format=json&dataset=nete-volume-calcs&variable=NetE" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -137,6 +226,54 @@ Lists the minimum and maximum dates available for a dataset and variable.
 
 Returns a list containing the start date and end date for the specified dataset and variable.
 
+## List Forecast Date Range
+
+Lists the minimum and maximum dates available for a dataset and variable.
+
+=== "Python"
+
+    ```python
+    import requests
+
+    url = "https://nasa-revap.dri.edu/info/list_forecast_dates"
+    headers = {
+        "api-key": "YOUR_API_KEY"
+    }
+    params = {
+        "output_format": "json",  # or "csv"
+        "dataset": "nete-volume-calcs",
+        "variable": "NetE"
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    data = response.json()
+    print(data)
+    ```
+
+=== "cURL"
+
+    ```sh
+    # Set your API key
+    API_KEY="YOUR_API_KEY"
+
+    # Get date range for a dataset and variable
+    curl -X GET "https://nasa-revap.dri.edu/info/list_forecast_dates?output_format=json&dataset=nete-volume-calcs&variable=NetE" \
+         -H "api-key: ${API_KEY}"
+    ```
+
+### Parameters
+
+| Parameter     | Type   | Description                                      | Default           |
+| ------------- | ------ | ------------------------------------------------ | ----------------- |
+| output_format | string | Response format (json or csv)                    | json              |
+| dataset       | string | Dataset name (cfs_gridmet, res, lem, nete-volume-calcs) | nete-volume-calcs |
+| variable      | string | Variable name (see list_forecast_variables endpoint) | NetE          |
+
+### Response
+
+Returns a list containing the start date and end date for the specified dataset and variable.
+
+
 ## List Reservoir Names
 
 Lists available reservoir IDs (OWEN_NAME) that can be used in other API requests.
@@ -146,7 +283,7 @@ Lists available reservoir IDs (OWEN_NAME) that can be used in other API requests
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_OWEN_NAMES"
+    url = "https://nasa-revap.dri.edu/info/list_OWEN_NAMES"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -179,11 +316,11 @@ Lists available reservoir IDs (OWEN_NAME) that can be used in other API requests
     API_KEY="YOUR_API_KEY"
 
     # Get reservoir names without shapefile
-    curl -X POST "https://operevap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
+    curl -X POST "https://nasa-revap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}"
 
     # Get reservoir names with shapefile (if needed)
-    curl -X POST "https://operevap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
+    curl -X POST "https://nasa-revap.dri.edu/info/list_OWEN_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}" \
          -F "shapefile_shp=@your_shapefile.shp" \
          -F "shapefile_dbf=@your_shapefile.dbf" \
@@ -218,7 +355,7 @@ Lists available station IDs (STA_NAME) that can be used in other API requests.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_STA_NAMES"
+    url = "https://nasa-revap.dri.edu/info/list_STA_NAMES"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -251,11 +388,11 @@ Lists available station IDs (STA_NAME) that can be used in other API requests.
     API_KEY="YOUR_API_KEY"
 
     # Get station names without shapefile
-    curl -X POST "https://operevap.dri.edu/info/list_STA_NAMES?output_format=json" \
+    curl -X POST "https://nasa-revap.dri.edu/info/list_STA_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}"
 
     # Get station names with shapefile (if needed)
-    curl -X POST "https://operevap.dri.edu/info/list_STA_NAMES?output_format=json" \
+    curl -X POST "https://nasa-revap.dri.edu/info/list_STA_NAMES?output_format=json" \
          -H "api-key: ${API_KEY}" \
          -F "shapefile_shp=@your_shapefile.shp" \
          -F "shapefile_dbf=@your_shapefile.dbf" \
@@ -290,7 +427,7 @@ Lists available variables for stations.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_stations_variables"
+    url = "https://nasa-revap.dri.edu/info/list_stations_variables"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -311,7 +448,7 @@ Lists available variables for stations.
     API_KEY="YOUR_API_KEY"
 
     # Get station variables
-    curl -X GET "https://operevap.dri.edu/info/list_stations_variables?output_format=json&STA_NAMES=ALL_STATIONS" \
+    curl -X GET "https://nasa-revap.dri.edu/info/list_stations_variables?output_format=json&STA_NAMES=ALL_STATIONS" \
          -H "api-key: ${API_KEY}"
     ```
 
@@ -335,7 +472,7 @@ Lists the minimum and maximum dates available for stations in the database.
     ```python
     import requests
 
-    url = "https://operevap.dri.edu/info/list_stations_dates"
+    url = "https://nasa-revap.dri.edu/info/list_stations_dates"
     headers = {
         "api-key": "YOUR_API_KEY"
     }
@@ -356,7 +493,7 @@ Lists the minimum and maximum dates available for stations in the database.
     API_KEY="YOUR_API_KEY"
 
     # Get station date range
-    curl -X GET "https://operevap.dri.edu/info/list_stations_dates?output_format=json&STA_NAMES=ALL_STATIONS" \
+    curl -X GET "https://nasa-revap.dri.edu/info/list_stations_dates?output_format=json&STA_NAMES=ALL_STATIONS" \
          -H "api-key: ${API_KEY}"
     ```
 

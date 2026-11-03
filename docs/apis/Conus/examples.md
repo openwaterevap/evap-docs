@@ -195,7 +195,7 @@ pip install requests
             return None
 
     # Example usage
-    reservoirs_to_compare = ["LAKE TRAVIS, "LAKE TEXOMA", "LAKE COMO"]
+    reservoirs_to_compare = ["LAKE TRAVIS", "LAKE TEXOMA", "LAKE COMO"]
     comparison_data = compare_reservoirs(reservoirs_to_compare, "2020-06-01", "2020-08-31")
 
     # Process and visualize data
