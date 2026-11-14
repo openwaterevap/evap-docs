@@ -28,18 +28,23 @@ OWEN datasets vary in geographic coverage, meteorological inputs, reservoir
 parameters, update frequency, and intended application. All datasets use DLEM
 to estimate evaporation.
 
-| Dataset                                                                             | Coverage and purpose | Status |
-|-------------------------------------------------------------------------------------| --- | --- |
-| [Texas database](databases/texas_db.md)                 | Texas water bodies | Available |
-| [Reclamation database](databases/reclamation_db.md) | Reclamation water bodies | Available |
-| [CONUS database](databases/conus_db.md) | More than 44,000 water bodies across the conterminous United States | Planned for 2027 |
+| Dataset                                                                             | Coverage and purpose                                              | Status      |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------|
+| [Texas database](databases/texas_db.md)                 | Texas water bodies                                                | Available   |
+| [Reclamation database](databases/reclamation_db.md) | Reclamation water bodies                                          | Available   |
+| [CONUS database](databases/conus_db.md) | More than 43,000 water bodies across the contiguous United States | Beta Status |
 
 
 ## Evaporation Databases
 
-OWEN provides both general and agency-specific datasets to support a wide range of operational, planning, and research use cases. The datasets are designed to support specific user needs, including access to near-real-time evaporation estimates, continuity across historical and current conditions, and forecasting applications.
+OWEN provides both general and agency-specific datasets to support a wide range of operational, planning, and research
+use cases. The datasets are designed to support specific user needs, including access to near-real-time evaporation
+estimates, continuity across historical and current conditions, and forecasting applications.
 
-All OWEN datasets use the DLEM model to generate evaporation estimates. They differ in their meteorological forcing data, reservoir parameter information, geographic coverage, update frequency, and intended operational use. Together, these datasets provide flexible options for users who need consistent evaporation information for monitoring, water-management decisions, long-term analysis, and forward-looking planning.
+All OWEN datasets use the DLEM model to generate evaporation estimates. They differ in their meteorological forcing
+data, reservoir parameter information, geographic coverage, update frequency, and intended operational use. Together,
+these datasets provide flexible options for users who need consistent evaporation information for monitoring,
+water-management decisions, long-term analysis, and forward-looking planning.
 
 
 ## About evaporation estimation

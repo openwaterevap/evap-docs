@@ -20,7 +20,7 @@ from pathlib import Path
 PROJECTS = {
     "Texas": "https://twdb.dri.edu",
     "Reclamation": "https://operevap.dri.edu",
-    "Conus": "https://nasa-revap.dri.edu",
+    "CONUS": "https://nasa-revap.dri.edu",
 }
 
 # Endpoint groups the docs use; anything else (e.g. /docs) is ignored.

@@ -2,7 +2,7 @@
 
 ## System Overview
 
-The Desert Research Institute (DRI) operates a robust, production-grade system designed to accurately estimate reservoir evaporation. This sophisticated system leverages the Texas A&M Daily Lake Evaporation Model (DLEM) as the foundational model used to estimate reservoir evaporation rates.
+The Desert Research Institute (DRI) operates a robust, production-grade system designed to accurately estimate reservoir evaporation. This system leverages the Texas A&M Daily Lake Evaporation Model (DLEM) as the foundational model used to estimate reservoir evaporation rates.
 
 The system integrates a comprehensive suite of processes including:
 
@@ -51,7 +51,7 @@ FastAPI-based Application Programming Interfaces provide programmatic access to 
 |-------------|----------|---------------|
 | Texas       | [https://twdb.dri.edu](https://twdb.dri.edu) | [Texas API](apis/Texas/getting-started.md) |
 | Reclamation | [https://operevap.dri.edu](https://operevap.dri.edu) | [Reclamation API](apis/Reclamation/getting-started.md) |
-| Conus       | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) | [Conus API](apis/Conus/getting-started.md) |
+| CONUS       | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) | [Conus API](apis/CONUS/getting-started.md) |
 
 - Enables automated data retrieval and integration
 - Supports targeted data queries by reservoir, variable, and time period
@@ -64,7 +64,7 @@ Interactive web applications built using the Earth Engine JavaScript API:
 |-------------|-----------------|
 | Texas       | [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation) |
 | Reclamation | [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation) |
-| Conus       | [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap) |
+| CONUS       | [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap) |
 
 - Facilitates visualization and exploration of reservoir evaporation data
 - Interactive mapping and data analysis capabilities

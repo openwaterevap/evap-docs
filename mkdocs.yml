@@ -133,7 +133,7 @@ nav:
   - Databases:
       - Texas: databases/texas_db.md
       - Reclamation: databases/reclamation_db.md
-      - Conus: databases/conus_db.md
+      - CONUS: databases/conus_db.md
   - APIs:
       - Overview: apis/overview.md
       - Texas:
@@ -156,16 +156,16 @@ nav:
         - Examples: apis/Reclamation/examples.md
         - Appendix: apis/Reclamation/appendix.md
         - API Playground: https://playground.openwaterevap.net/
-      - Conus:
-        - Authentication: apis/Conus/authentication.md
-        - Getting Started: apis/Conus/getting-started.md
+      - CONUS:
+        - Authentication: apis/CONUS/authentication.md
+        - Getting Started: apis/CONUS/getting-started.md
         - Endpoints:
-          - Info Endpoints: apis/Conus/info-endpoints.md
-          - Metadata Endpoints: apis/Conus/metadata-endpoints.md
-          - Time Series Endpoints: apis/Conus/timeseries-endpoints.md
-        - Examples: apis/Conus/examples.md
-        - Appendix: apis/Conus/appendix.md
-        - API Playground: https://nasa-revap.dri.edu/
+          - Info Endpoints: apis/CONUS/info-endpoints.md
+          - Metadata Endpoints: apis/CONUS/metadata-endpoints.md
+          - Time Series Endpoints: apis/CONUS/timeseries-endpoints.md
+        - Examples: apis/CONUS/examples.md
+        - Appendix: apis/CONUS/appendix.md
+#        - API Playground: https://nasa-revap.dri.edu/
 
   - FAQ: faq.md
   - Contact: contact.md

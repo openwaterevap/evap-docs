@@ -1,11 +1,11 @@
 # Reclamation Reservoir Evaporation
 
-> Daily, near-real-time evaporation estimates and forecast products for Reclamation reservoirs.
+> Daily, near-real-time evaporation estimates for Reclamation reservoirs.
 
-![USBR](../images/reclamation_wide_dark.jpg)
+![USBR](../images/reclamation_wide_dark.jpg){ width="180" }
 
 
-## Data Access
+## Find the right resource
 
 | Resource | Use it to | Access |
 |---|---|---|
@@ -34,7 +34,7 @@ cloud-based processing to provide consistent evaporation estimates for Reclamati
 Reclamation DLEM estimates are being explored for potential integration in modeling and forecasting
 workflows. Data is considered provisional and not in operational use at this time. 
 
-See the [project report](URL) for more details.
+See the [project report](https://data.usbr.gov/catalog/8595/item/134220) for more details.
 
 ### Project objectives
 - Produce reservoir-specific evaporation rates and volumes for Reclamation reservoirs.
@@ -60,7 +60,7 @@ Reclamation reservoirs.
 | Meteorological forcing¹ | gridMET          | 1980–2015 | Bias-corrected to align with RTMA and used to force DLEM. | [gridMET](https://www.climatologylab.org/gridmet.html)                                            |
 | Meteorological forcing¹ | RTMA             | 2016–present | Aggregated from hourly to daily and used to force DLEM. | [Climate Engine RTMA Daily](https://climateengine.org/datasets/climatehydrology/rtma_daily_2500/) |
 | Precipitation | gridMET          | 1980–present | Used in precipitation and net-evaporation estimates. | [gridMET](https://www.climatologylab.org/gridmet.html)                                            |
-| Reservoir parameters | TWDB             | 1980–present | Provides reservoir area, volume, and depth data where available. | [USBR RISE and others²](https://data.usbr.gov/rise-api)                                           |
+| Reservoir parameters | Reclamation      | 1980–present | Provides reservoir area, volume, and depth data where available. | [USBR RISE and others²](https://data.usbr.gov/rise-api)                                           |
 | GIS data | Reclamation      | — | Provides reservoir geometry and extent. | [RISE](https://data.usbr.gov/catalog/6406/item/72729)                                             |
 
 ¹ Meteorological forcing variables include air temperature, vapor pressure deficit,
@@ -69,7 +69,7 @@ wind speed and direction, solar radiation, and air pressure. See the
 
 
 ² Reservoir elevation information is gathered from multiple sources including Reclamation’s Hydromet, United States Geological Survey (USGS) National Water Information System (NWIS),
-Reclamation Information Sharing Environment (RISE), and the California Data Exchange Center (CDEC). Elevaiton information is combined with Area-Elevation-Capacity curves to 
+Reclamation Information Sharing Environment (RISE), and the California Data Exchange Center (CDEC). Elevation information is combined with Area-Elevation-Capacity curves to 
 estimate both surface area and average depth. Locations without accessible data use static values for depth and area. 
 
 [//]: # (## Reservoir Depth, Area, and Volumes)
