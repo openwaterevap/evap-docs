@@ -7,9 +7,10 @@
     estimates derived from remote sensing workflows are planned for incorporation in 2027. Users should
     interpret estimates with caution and anticipate updates to data values and methodology.
 
-<p align="center">
-  <img src="/images/conus_water.png" width="480" alt="CONUS-wide water bodies.">
-</p>
+<figure style="display: table; margin: 0 auto;">
+  <img src="/images/conus_waterbodies_crop.jpg" width="800" alt="CONUS-wide water bodies.">
+  <figcaption style="display: table-caption; caption-side: bottom;"><em>Map of water bodies throughout CONUS.</em></figcaption>
+</figure>
 
 ## Find the right resource
 
