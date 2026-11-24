@@ -49,9 +49,9 @@ FastAPI-based Application Programming Interfaces provide programmatic access to 
 
 | Project     | Base URL | Documentation |
 |-------------|----------|---------------|
-| Texas       | [https://twdb.dri.edu](https://twdb.dri.edu) | [Texas API](apis/Texas/getting-started.md) |
-| Reclamation | [https://operevap.dri.edu](https://operevap.dri.edu) | [Reclamation API](apis/Reclamation/getting-started.md) |
-| CONUS       | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) | [Conus API](apis/CONUS/getting-started.md) |
+| OWEN-TX     | [https://twdb.dri.edu](https://twdb.dri.edu) | [OWEN-TX API](apis/Texas/getting-started.md) |
+| OWEN-USBR   | [https://operevap.dri.edu](https://operevap.dri.edu) | [OWEN-USBR API](apis/Reclamation/getting-started.md) |
+| OWEN-CONUS  | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) | [OWEN-CONUS API](apis/CONUS/getting-started.md) |
 
 - Enables automated data retrieval and integration
 - Supports targeted data queries by reservoir, variable, and time period
@@ -62,9 +62,9 @@ Interactive web applications built using the Earth Engine JavaScript API:
 
 | Project     | Web application |
 |-------------|-----------------|
-| Texas       | [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation) |
-| Reclamation | [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation) |
-| CONUS       | [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap) |
+| OWEN-TX     | [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation) |
+| OWEN-USBR   | [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation) |
+| OWEN-CONUS  | [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap) |
 
 - Facilitates visualization and exploration of reservoir evaporation data
 - Interactive mapping and data analysis capabilities

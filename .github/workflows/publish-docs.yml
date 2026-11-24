@@ -30,7 +30,8 @@ jobs:
           uv pip install --system \
             wheel \
             lxml \
-            mkdocs-material \
+            "mkdocs>=1.6,<2" \
+            "mkdocs-material>=9.7,<10" \
             "cairosvg>=2.5" \
             "mkdocs-git-committers-plugin-2>=1.1.1" \
             "mkdocs-open-in-new-tab" \

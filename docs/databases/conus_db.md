@@ -1,4 +1,4 @@
-# CONUS Open Water Evaporation
+# OWEN-CONUS Open Water Evaporation
 
 > Daily, near-real-time evaporation estimates and forecast products for reservoirs and lakes throughout the contiguous United States (CONUS).
 
@@ -44,7 +44,7 @@ cloud-based processing to provide consistent evaporation estimates across the Co
 - Support water management, planning, analysis, and public access to evaporation data.
 
 ### Partners and funding
-The CONUS-wide Reservoir Evaporation Project was supported by:
+The OWEN-CONUS Reservoir Evaporation Project was supported by:
 
 - [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/)
 - [United States Geological Survey (USGS)](https://www.usgs.gov/)
@@ -68,13 +68,13 @@ applications. The following table summarizes the primary datasets used to develo
 wind speed and direction, solar radiation, and air pressure. See the
 [Appendix](https://docs.openwaterevap.net/appendix/) for additional information and definitions.
 
-²Current estimates in the CONUS-wide dataset apply static surface area and depth information derived from the original
+²Current estimates in the OWEN-CONUS dataset apply static surface area and depth information derived from the original
 polygon data source (e.g. Reclamation, Texas Water Development Board, USGS, and HydroLAKES). To support improved
 estimation of water body surface area, volume, and depth at locations lacking monitoring or real-time data, a remote
 sensing workflow is under development. It uses Landsat satellite imagery and the
 [USGS Dynamic Surface Water Extent algorithm](https://www.usgs.gov/landsat-missions/landsat-dynamic-surface-water-extent-science-products).
 
-³The CONUS-wide dataset blends geometry information from multiple sources to provide spatial coverage throughout CONUS.
+³The OWEN-CONUS dataset blends geometry information from multiple sources to provide spatial coverage throughout CONUS.
 Specific sources include Reclamation, Texas Water Development Board, USGS, and HydroLAKES. Before integration,
 HydroLAKES polygons were screened and refined to improve linework and more accurately represent the extent of each water
 body. Source information for individual polygons is available in the GIS attribute tables.

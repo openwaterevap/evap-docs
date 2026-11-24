@@ -1,4 +1,4 @@
-# CONUS API Appendix
+# OWEN-CONUS API Appendix
 
 ## Available Variables
 
@@ -8,7 +8,7 @@ The following variables are available for reservoirs, by dataset:
 
 #### URMA Dataset (Weather Variables)
 
-The CONUS project uses daily weather data from the UnRestricted Mesoscale Analysis (URMA). See the [Methods](../../methods.md) section for additional details.
+The OWEN-CONUS project uses daily weather data from the UnRestricted Mesoscale Analysis (URMA). See the [Methods](../../methods.md) section for additional details.
 
 | Variable | Description | Units (Metric) | Units (English) |
 |----------|-------------|----------------|-----------------|

@@ -1,4 +1,4 @@
-# Texas Reservoir Evaporation
+# OWEN-TX Reservoir Evaporation
 
 > Daily, near-real-time evaporation estimates and forecast products for Texas reservoirs.
 
@@ -40,7 +40,7 @@ cloud-based processing to provide consistent evaporation estimates across Texas.
 - Support water management, planning, analysis, and public access to evaporation data.
 
 ### Partners and funding
-The Texas Reservoir Evaporation Project was jointly funded by:
+The OWEN-TX Reservoir Evaporation Project was jointly funded by:
 
 - [Texas Water Development Board (TWDB)](https://www.twdb.texas.gov/)
 - [U.S. Army Corps of Engineers (USACE)](https://www.swf.usace.army.mil/)

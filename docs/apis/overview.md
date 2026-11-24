@@ -1,10 +1,10 @@
 # API Overview
 
-Each OWEN project (Texas, Reclamation, and CONUS) has its own Reservoir Evaporation API. The APIs share the same structure, but the endpoints they offer differ by project.
+Each OWEN project (OWEN-TX, OWEN-USBR, and OWEN-CONUS) has its own Reservoir Evaporation API. The APIs share the same structure, but the endpoints they offer differ by project.
 
 ## Key differences
 
-| | Texas | Reclamation | CONUS                                                    |
+| | OWEN-TX | OWEN-USBR | OWEN-CONUS |
 |---|---|---|----------------------------------------------------------|
 | Base URL | [https://twdb.dri.edu](https://twdb.dri.edu) | [https://operevap.dri.edu](https://operevap.dri.edu) | [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu) |
 | Reservoir name parameter | `RES_NAMES` | `RES_NAMES` | `OWEN_NAMES`                                             |
@@ -13,11 +13,11 @@ Each OWEN project (Texas, Reclamation, and CONUS) has its own Reservoir Evaporat
 | Gridded pond evaporation | Yes | No | No                                                       |
 | Documentation | [Getting Started](Texas/getting-started.md) | [Getting Started](Reclamation/getting-started.md) | [Getting Started](CONUS/getting-started.md)              |
 
-Each project requires its own API key. See the Authentication page for [Texas](Texas/authentication.md), [Reclamation](Reclamation/authentication.md), or [CONUS](CONUS/authentication.md).
+Each project requires its own API key. See the Authentication page for [OWEN-TX](Texas/authentication.md), [OWEN-USBR](Reclamation/authentication.md), or [OWEN-CONUS](CONUS/authentication.md).
 
 ## Endpoint availability
 
-| Endpoint | Texas | Reclamation | CONUS |
+| Endpoint | OWEN-TX | OWEN-USBR | OWEN-CONUS |
 |---|:---:|:---:|:---:|
 | `GET /auth/request_key` | ✓ | ✓ | ✓ |
 | `GET /info/list_datasets`, `/info/list_variables`, `/info/list_dates` | ✓ | ✓ | ✓ |
@@ -37,4 +37,4 @@ Each project requires its own API key. See the Authentication page for [Texas](T
 | `GET /timeseries/daily/polygon/pond_evaporation/daterange` | ✓ | – | – |
 
 !!! note
-    The station variable and date endpoints are named `list_station_*` on the Reclamation API and `list_stations_*` on the CONUS API.
+    The station variable and date endpoints are named `list_station_*` on the OWEN-USBR API and `list_stations_*` on the OWEN-CONUS API.

@@ -5,19 +5,19 @@
 There are three ways to access the data:
 
 1. **Web applications** for data visualization
-    - **Texas**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
-    - **Reclamation**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
-    - **CONUS**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
+    - **OWEN-TX**: [https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation](https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation)
+    - **OWEN-USBR**: [https://dri-apps.earthengine.app/view/bor-reservoir-evaporation](https://dri-apps.earthengine.app/view/bor-reservoir-evaporation)
+    - **OWEN-CONUS**: [https://dri-apps.projects.earthengine.app/view/openwaterevap](https://dri-apps.projects.earthengine.app/view/openwaterevap)
 
 2. **API Playgrounds** for interactive data inspection
-    - **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
-    - **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
-    - **CONUS**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
+    - **OWEN-TX**: [https://twdb.dri.edu](https://twdb.dri.edu)
+    - **OWEN-USBR**: [https://operevap.dri.edu](https://operevap.dri.edu)
+    - **OWEN-CONUS**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
 
 3. **APIs** for programmatic access (requires an API key)
-    - **Texas**: [Getting Started](apis/Texas/getting-started.md)
-    - **Reclamation**: [Getting Started](apis/Reclamation/getting-started.md)
-    - **CONUS**: [Getting Started](apis/CONUS/getting-started.md)
+    - **OWEN-TX**: [Getting Started](apis/Texas/getting-started.md)
+    - **OWEN-USBR**: [Getting Started](apis/Reclamation/getting-started.md)
+    - **OWEN-CONUS**: [Getting Started](apis/CONUS/getting-started.md)
 
 ## How do I cite this dataset?
 
@@ -67,9 +67,9 @@ information you'd like incorporated, please contact our team.
 ## Reservoir area, elevation, and volume values disagree with internal or operational estimates from my agency?
 
 Reservoir AEV information is collated from numerous online databases and resources (see the data sources for
-[Texas](databases/texas_db.md#data-sources-and-model-forcings),
-[Reclamation](databases/reclamation_db.md#data-sources-and-model-forcings),
-and [CONUS](databases/conus_db.md#data-sources-and-model-forcings)). In many cases, reservoir Area-Elevation-Volume
+[OWEN-TX](databases/texas_db.md#data-sources-and-model-forcings),
+[OWEN-USBR](databases/reclamation_db.md#data-sources-and-model-forcings),
+and [OWEN-CONUS](databases/conus_db.md#data-sources-and-model-forcings)). In many cases, reservoir Area-Elevation-Volume
 information uses updated bathymetric survey data that may not align with historical estimates.
 For consistency amongst each evaporation timeseries, the reservoir parameter workflow uses elevation combined with
 the latest available AEV curves to estimate volume and area. Stakeholders should use the best available judgement when
@@ -81,14 +81,14 @@ applying estimates and may choose to overwrite area, elevation, and volume infor
 
 ## How can I obtain an API key?
 
-Each project (Texas, Reclamation, CONUS) has its own API and requires its own API key.
+Each project (OWEN-TX, OWEN-USBR, OWEN-CONUS) has its own API and requires its own API key.
 
 ![image](images/api_page.png)
 
 1. Go to the API Playground for your project:
-    - **Texas**: [https://twdb.dri.edu](https://twdb.dri.edu)
-    - **Reclamation**: [https://operevap.dri.edu](https://operevap.dri.edu)
-    - **CONUS**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
+    - **OWEN-TX**: [https://twdb.dri.edu](https://twdb.dri.edu)
+    - **OWEN-USBR**: [https://operevap.dri.edu](https://operevap.dri.edu)
+    - **OWEN-CONUS**: [https://nasa-revap.dri.edu](https://nasa-revap.dri.edu)
 2. Click the down arrow by auth/request_key
 3. Click on "Try it out"
 4. Fill out the form
@@ -96,8 +96,8 @@ Each project (Texas, Reclamation, CONUS) has its own API and requires its own AP
 6. Your API key will be emailed to you within 1 to 2 business days
 
 You can also request a key programmatically; see the Authentication page for
-[Texas](apis/Texas/authentication.md), [Reclamation](apis/Reclamation/authentication.md), or
-[CONUS](apis/CONUS/authentication.md).
+[OWEN-TX](apis/Texas/authentication.md), [OWEN-USBR](apis/Reclamation/authentication.md), or
+[OWEN-CONUS](apis/CONUS/authentication.md).
 
 ## What do the data flags mean?
 

@@ -30,9 +30,9 @@ to estimate evaporation.
 
 | Dataset                                                                             | Coverage and purpose                                              | Status      |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------|
-| [Texas database](databases/texas_db.md)                 | Texas water bodies                                                | Available   |
-| [Reclamation database](databases/reclamation_db.md) | Reclamation water bodies                                          | Available   |
-| [CONUS database](databases/conus_db.md) | More than 43,000 water bodies across the contiguous United States | Beta Status |
+| [OWEN-TX database](databases/texas_db.md)                 | Texas water bodies                                                | Available   |
+| [OWEN-USBR database](databases/reclamation_db.md) | Reclamation water bodies                                          | Available   |
+| [OWEN-CONUS database](databases/conus_db.md) | More than 43,000 water bodies across the contiguous United States | Beta Status |
 
 
 ## Evaporation Databases

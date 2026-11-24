@@ -1,4 +1,4 @@
-# Reclamation Reservoir Evaporation
+# OWEN-USBR Reservoir Evaporation
 
 > Daily, near-real-time evaporation estimates for Reclamation reservoirs.
 
@@ -42,7 +42,7 @@ See the [project report](https://data.usbr.gov/catalog/8595/item/134220) for mor
 - Support water management, planning, analysis, and public access to evaporation data.
 
 ### Partners and funding
-The Reclamation Reservoir Evaporation Project was developed in partnership with Reclamation Technical Service Center (TSC)
+The OWEN-USBR Reservoir Evaporation Project was developed in partnership with Reclamation Technical Service Center (TSC)
 and funded by:
 
 - [United States Bureau of Reclamation (Reclamation)](https://www.usbr.gov/)
